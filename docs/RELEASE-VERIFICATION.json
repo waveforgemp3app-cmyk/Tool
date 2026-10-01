@@ -1,0 +1,25 @@
+{
+  "version": "v1.0.0-alpha.1",
+  "archive": "Dekaron-Engine-Alpha-1.0.rar",
+  "sha256": "99089ae3d20e2bb8c4a3a4fa67e41ba14973825bd49ce35194f59f415d77f987",
+  "bytes": 10801838,
+  "installerSha256": "361449f33fa4b75e8151c15486481384c03ee4c771e0bed4fd1db2aa111e9503",
+  "passes": 2,
+  "secondManualTestPending": true,
+  "checks": [
+    "Private local owner/GM authentication",
+    "Rendered game entry",
+    "Save and stop",
+    "Repeat cached Start",
+    "Desktop shortcut creation and recreation",
+    "Original data/bin preserved",
+    "Clean expected root layout"
+  ],
+  "scope": "Scripted installed native functions and isolated browser on this Windows host; not universal client/OS compatibility or physical UI proof",
+  "privacy": {
+    "payloadFiles": 1279,
+    "payloadPassed": true,
+    "outerPassed": true,
+    "archiveRoundtripPassed": true
+  }
+}
