@@ -1,30 +1,35 @@
-# Dekaron Engine — Alpha 1.0
+**[Download Alpha 1.0.1 — normal ZIP, no password](https://github.com/waveforgemp3app-cmyk/Tool/releases/tag/v1.0.1-alpha.1)**
 
-**Bring your own compatible Dekaron client data. Build a world, play with friends, and create items and maps from the same Windows tool.**
+# Dekaron Engine — Alpha 1.0.1
 
-Dekaron Engine is an independent engine reimplementation with a Windows launcher, desktop/browser client, shared-world server and integrated authoring tools. It reads supported data from your own client installation. Original game assets are not bundled. This project is unfinished and is not affiliated with the official game or publisher.
+**Normal ZIP download — no archive password required.** Extract the ZIP before running anything. This package contains accessible engine source/runtime files and Client.exe; it is not another SFX wrapper.
 
-**[Download Alpha 1.0](https://github.com/waveforgemp3app-cmyk/Tool/releases/tag/v1.0.0-alpha.1)** · Archive: `Dekaron-Engine-Alpha-1.0.rar`
+## Setup in three steps
+1. Fully update your compatible Global client, close the game/updater, and keep a separate full backup.
+2. Extract Dekaron-Engine-Alpha-1.0.1.zip. Put its complete engine folder beside your data and bin folders, then open engine/Client.exe.
+3. Review the cleanup warning, click Start, let preparation finish, then sign up or use the local owner sign-in option. Choose the desktop client or browser.
 
-Archive password: `79576538508185188528157576021547`
+**Existing users:** stop your server and back up accounts, saves, settings and projects before replacing engine code. This ZIP is a manual package, not the old managed SFX installer. Do not delete private state to force an update; use a separate fresh client folder if unsure.
 
-SHA-256: `99089ae3d20e2bb8c4a3a4fa67e41ba14973825bd49ce35194f59f415d77f987`
+Windows PowerShell/.NET Framework and Chrome or Edge are required. A compatible Node.js 20+ is reused or a pinned official runtime is downloaded over HTTPS and SHA-256 checked. Three.js is included. First preparation can take several minutes.
 
-## New installation — three steps to your own world
+## Changes in this patch
+- Added server-wide world chat with a cooldown; /global maps to world and /map maps to map-wide shout.
+- Improved first-person target selection with bounded aim assistance.
+- Added one bounded retry for transient auto-attack range rejection while the same live target remains selected.
+- Adjusted enhancement highlights toward warm gold and strengthened the shimmer.
+- Repaired the Battle Support Start/Cancel handler and prevented its loop from interrupting a busy skill. Full panel skill assignment and in-game acceptance remain under review; this is not a claim that all Battle Support options are complete.
+- Rebuilt Client.exe and provided a normal ZIP for users unable to extract the SFX.
 
-1. **Prepare your client.** Update your own supported Dekaron Global installation, close its updater, and back up the complete folder.
-2. **Extract and run.** Extract the verified download using its supplied password, then open **RUN-ME-FOR-GAME.exe**.
-3. **Confirm and play.** Confirm the detected folder and cleanup warning. Let preparation finish, then sign up or use the local owner sign-in option and open the game.
+## Verification for this package
+Launcher compilation, runtime download/hash and failure-path tests, 37 installer fixture checks, preparation/reuse checks, three validate-only launcher location smoke cases, signup tests, targeting/retry tests, and world-chat/mail/guild tests passed. Guild tests verify supported existing behavior, not every Global guild feature.
 
-No coding or separate database installation is required for the local setup. **Preparation replaces the original launcher and removes unused files in the selected folder. Keep your backup outside that folder.** Hosting for friends requires the additional network and access setup described in the documentation. Supported installation layouts are checked; compatibility with every client build is not promised.
+The 1,276-file payload and extracted ZIP passed manifest/hash and privacy scans. Private accounts, local host configuration, logs, original game data and caches are excluded. Known machine/owner identifiers and credential patterns were checked. This is a bounded audit, not an absolute privacy guarantee.
 
-## Existing installation — update separately
+**No new full clean-install-to-rendered-game acceptance run was performed for this ZIP.** Earlier Alpha 1.0 installer results do not count as tests of this new package. Remaining visual, mount, Battle Support and gameplay reports still need in-game acceptance; zero lag and complete Global parity are not promised.
 
-1. **Back up first.** Keep a separate backup of your existing installation, accounts, characters, settings and builder projects. Close the client and stop its server before changing files.
-2. **Run the new installer.** Extract the new release and open **RUN-ME-FOR-GAME.exe**. Select your existing game folder when prompted.
-3. **Review, then restart.** Confirm the intended installation and update warning. The installer replaces verified engine files while retaining private accounts/settings and supplied data/bin. Reopen the launcher and check your characters before deleting the backup.
-
-Managed installations and both verified RC3 download variants are recognized. Modified, mixed or unrecognized engine files are refused before replacement; do not delete your account files to force an update. First preparation or changed source data can take several minutes; unchanged prepared data is reused on later starts. The launcher installs a checked official Node.js runtime if needed; Chrome or Edge must already be available for the game window.
+SHA-256 (checksum, NOT a password):
+`3294fc3e556430fc84f09d73d5a156416cc87ad1460db1b7112857080e85f0e9`
 
 ## Play in first person or third person
 
@@ -105,30 +110,10 @@ Original-map editing and shared brush sessions have their own documented constra
 - Nearby authored architectural gates/trees remain visible under the corrected occlusion handling. Original return-to-character/login flows and GM Save & Stop Server are retained.
 - Edit Current remains open during temporary world-busy synchronization instead of treating it as a lost login; real permission or session loss still closes privileged tools.
 
-## What was checked
 
-**One restored clean-install run passed using the exact downloadable installer. The owner has authorized this release and will perform the second acceptance test personally.** The installed flow checked folder discovery, original data/bin preservation, cleanup, desktop shortcut creation/recreation, local owner GM sign-in, a rendered game world, save/stop and repeat cached Start. These were scripted tests of the installed native launcher and isolated browser; physical mouse-click acceptance and an elevated administrator run are separate.
+## Feedback and documentation
+Bug reports are welcome—please include your version, class, skill/item and reproduction steps. I appreciate the feedback and will investigate reports. Never include credentials or account files.
 
-The payload, executable and extracted encrypted archive passed the privacy/manifest review. Incorrect passwords were rejected. No original game data, private accounts, host settings, chat logs or local runtime caches are bundled. Known-identifier scans are bounded checks, not a guarantee against every possible unknown identifier.
+[Feature catalog](https://github.com/waveforgemp3app-cmyk/Tool/blob/main/docs/FEATURES.md) · [Tool gallery](https://github.com/waveforgemp3app-cmyk/Tool/tree/main/docs/showcase)
 
-First-person checks include **15-class, 75-view full-body checks**, **135 mounted CPU cases across nine styles using the actual mount API**, six fresh native bike views, and 14 transformed views with separate weapon/body diagnostics. All 36 available native transformation meshes receive source-pose/clearance checks. Native weapon-style tests cover many class/style combinations, with declared-but-unwearable source cases recorded separately. These are bounded checks, not acceptance of every animation, every GPU or every client version. Of 599 source vehicle rows, 570 have native visual bindings; the 29 without bindings now refuse summoning instead of creating an invisible ride.
-
-Focused tests cover source pose preservation, view/body heading, effects attachment, shader/material handling, native gear data, movement/skill cancellation, monster roaming, account persistence and permission enforcement. The CPU animation presentation benchmark excludes GPU rendering and asset loading; no zero-latency claim is made.
-
-This remains an alpha project. Complete Global-client parity, every native server script, all PvP/PK/siege/rebirth rules, all mount visuals, unsupported services and universal instant loading are not promised. Known missing source references and remaining work are documented.
-
-## Bug reports and feedback
-
-Bug reports are welcome—post the details in this thread and I'll gladly investigate. I appreciate your comments and feedback! Include your release version, class, item or skill name, and the steps that caused the problem. A screenshot helps; please keep passwords, tokens, account files and personal information out of reports.
-
-## Source, documentation and downloads
-
-Project: https://github.com/waveforgemp3app-cmyk/Tool
-
-The repository contains the feature catalog, tool references, setup/hosting guidance and remaining limits. Bring your own compatible client data; original meshes, textures, audio, private accounts and local configuration are not included in the public source package.
-
-
-
-[Tool screenshots and gallery](https://github.com/waveforgemp3app-cmyk/Tool/tree/main/docs/showcase) · [Hosting guide](https://github.com/waveforgemp3app-cmyk/Tool/blob/main/docs/HOSTING.md) · [Feature catalog](https://github.com/waveforgemp3app-cmyk/Tool/blob/main/docs/FEATURES.md)
-
-Third-party notices remain applicable. No project-wide open-source license or rights to the original game assets are granted by this download.
+Independent project, not affiliated with the original publisher. Bring your own compatible client data. Original game assets are not distributed; third-party notices remain applicable.
