@@ -8,6 +8,14 @@ If no compatible Node.js is installed, the launcher downloads a pinned official 
 from nodejs.org and verifies its SHA-256 checksum. Its upstream LICENSE is retained next to node.exe
 inside engine/runtime. This private runtime is not included in the tool release.
 
+Optional managed relay mode can download Cloudflare's cloudflared 2026.9.3 Windows
+runtime from its official GitHub release and verifies the pinned SHA-256. The
+runtime is excluded from the tool-only archive. Its upstream license is Apache
+2.0: https://github.com/cloudflare/cloudflared/blob/2026.9.3/LICENSE
+Release/source: https://github.com/cloudflare/cloudflared/releases/tag/2026.9.3
+If redistributing the runtime itself, review and retain its applicable license,
+notices and dependency notices; this tool notice does not replace those files.
+
 The three PNG files in client-assets are newly generated launcher artwork, not extracted from the original
 game client. The website connector includes a copy of the generated logo. Generation prompts are excluded
 from the prepared download.
