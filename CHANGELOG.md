@@ -4,6 +4,18 @@ Every version, newest first. The newest build is always on the releases page: ht
 
 Where the game data does not establish a rule, the engine's own choice is marked ENGINE-CHOSEN (or FITTED when it was fitted to Global screenshots).
 
+## 2.2.3 - Faster First Start
+
+The last update of the 2.x line. It has one change: the preparation of the client data that runs on the first start after an install or an update now runs its steps in parallel. The game itself is unchanged.
+
+### Loading
+
+- **First start after an install or update:** The preparation used to take about 5 minutes (315 seconds on my PC) because its 21 steps ran one after another. Steps that do not depend on each other now run at the same time: the same preparation took 77 and 89 seconds in two runs on a 6-core PC with 32 GB of RAM (3.5 to 4 times faster; a PC with fewer cores gains less). The prepared files are identical to what the old order produced: compared file by file, every byte is the same except the time stamps inside 17 of the 57 data files.
+- **How many steps run at once:** up to 4, fewer on a PC with fewer than 5 cores, and at most 2 on a PC with less than 6 GB of RAM (4 at once used up to 3.8 GB of memory on my PC). Set the environment variable `DEKARON_PREPARE_JOBS` before starting the launcher to choose another number; `DEKARON_PREPARE_JOBS=1` runs the steps one after another as before.
+- **Safe on errors:** if one step fails or you close the launcher, all running steps are stopped before anything is cleaned up, and the previously prepared data stays in place.
+- **One more preparation after updating:** the preparation program itself changed, so every install prepares once after updating to 2.2.3 (about 1.5 minutes now).
+- **Changes to the channel files are noticed:** the preparation did not look at the channel rule files (`channel-data.mjs`, `channel-rules.js`), so editing them did not rebuild the prepared data. It does now.
+
 ## 2.2.2 - Bug Fix Update
 
 Fixes for problems found after 2.2.1, and two new per-server switches. Most of these fixes are in the server: hosts must update and restart their server to get them.

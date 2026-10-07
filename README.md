@@ -2,31 +2,31 @@
 
 **1-Click Installer • Full Release • Multiplayer • GM Tools • Item & Map Builders**
 
-**Current release: 2.2.2 Update.** This page always describes the newest build, the latest changes and the full feature list. The complete fix history of every version is in [CHANGELOG.md](CHANGELOG.md).
+**Current release: 2.2.3 Update.** This page always describes the newest build, the latest changes and the full feature list. The complete fix history of every version is in [CHANGELOG.md](CHANGELOG.md).
 
 ## Download
 
-- **[Download Dekaron-2.2.2.zip (GitHub, latest release)](https://github.com/waveforgemp3app-cmyk/Tool/releases/latest)** — no password.
-- Source (plain files, for inspection): `Dekaron-2.2.2-source.zip` on the same release page.
-- [VirusTotal scan (Dekaron-2.2.2.zip)](https://www.virustotal.com/gui/file/92d5382aeb17185cf1137b34ca2662da5f16b55059b58026691f1b38b2bc80ec)
-- [VirusTotal scan (Dekaron-2.2.2-source.zip)](https://www.virustotal.com/gui/file/761a9c735c45e8a4ddf833b0250b32899eb933c9885fda5dcca6f38863cb76ce)
+- **[Download Dekaron-2.2.3.zip (GitHub, latest release)](https://github.com/waveforgemp3app-cmyk/Tool/releases/latest)** — no password.
+- Source (plain files, for inspection): `Dekaron-2.2.3-source.zip` on the same release page.
+- [VirusTotal scan (Dekaron-2.2.3.zip)](https://www.virustotal.com/gui/file/ec5d4475cedcb68828f5031433ba7e81f322884a19d830df4de6e40ff74f22cd)
+- [VirusTotal scan (Dekaron-2.2.3-source.zip)](https://www.virustotal.com/gui/file/d6956e65dfd9729a489a0aeafcc059a8f87e888b956e284b01811cd6397a1fef)
 
 **VirusTotal (full details)**
-- VirusTotal at upload (2026-10-07): 5 of 67 engines flag the installer zip, 5 of 63 the source zip. Flagged by: Bkav Pro, Elastic, Malwarebytes, MaxSecure, SentinelOne (installer); Bkav Pro, Elastic, Malwarebytes, MaxSecure, SentinelOne (source). No engine names a malware family: the labels are generic machine-learning scores ("MachineLearning/Anomalous", "susgen", "Suspicious Archive"). Microsoft, Kaspersky, ESET and BitDefender report nothing.
+- VirusTotal at upload (2026-10-07): 5 of 65 engines flag the installer zip, 5 of 63 the source zip. Flagged by: Bkav Pro, Elastic, Malwarebytes, MaxSecure, SentinelOne (Static ML) (installer); Bkav Pro, Elastic, Malwarebytes, MaxSecure, SentinelOne (Static ML) (source). No engine names a malware family: the labels are generic machine-learning scores ("MachineLearning/Anomalous", "susgen", "Suspicious Archive"). Microsoft, Kaspersky, ESET and BitDefender report nothing.
 - Likely reasons (not proven): unsigned executables with no publisher and no real version info; every build is a new file with no reputation; a launcher that starts PowerShell scripts, a local server and a local port looks like a dropper to heuristics; the installer is a compressed self-extracting archive; the source zip shows the scripts as plain text. The cause is not established.
 - Check it yourself: the source zip has the same files as plain text, the installer carries exactly those files, and the SHA-256 values in the table match the scan pages.
 
 | File | SHA-256 |
 |---|---|
-| `Dekaron-2.2.2.zip` (installer + README, no password) | `92d5382aeb17185cf1137b34ca2662da5f16b55059b58026691f1b38b2bc80ec` |
-| `Dekaron-2.2.2-source.zip` (plain engine files, for inspection) | `761a9c735c45e8a4ddf833b0250b32899eb933c9885fda5dcca6f38863cb76ce` |
+| `Dekaron-2.2.3.zip` (installer + README, no password) | `ec5d4475cedcb68828f5031433ba7e81f322884a19d830df4de6e40ff74f22cd` |
+| `Dekaron-2.2.3-source.zip` (plain engine files, for inspection) | `d6956e65dfd9729a489a0aeafcc059a8f87e888b956e284b01811cd6397a1fef` |
 
 Download the release file, not GitHub's automatic "Source code" ZIP. The ZIP contains the engine only — no official game files, no accounts, no database to install. It reads the data from **your own, fully updated Dekaron Global installation**.
 
 ### Install in 1 click
 
 1. Install and fully update your Dekaron Global client. Close the game and the official updater. **Back up the whole game folder.**
-2. Extract `Dekaron-2.2.2.zip`. Inside are **RUN-ME-FOR-GAME.exe** and **README.txt**.
+2. Extract `Dekaron-2.2.3.zip`. Inside are **RUN-ME-FOR-GAME.exe** and **README.txt**.
 3. Run **RUN-ME-FOR-GAME.exe**, confirm your game folder (the Dekaron folder containing `data` and `bin`, not either subfolder), click **Start** and confirm the setup prompt.
 4. The first preparation reads your game data (a few minutes, once). A **Dekaron Online** desktop shortcut is created — from then on just double-click it.
 
@@ -36,35 +36,17 @@ Already installed? Open the launcher and click Start — a ready installation la
 
 **Requirements:** Windows 10/11, Chrome or Edge, and your updated Global client. The DX11 Client uses the Microsoft Edge WebView2 Runtime (part of Windows 11). Node.js is used if you already have it; if not, the launcher downloads its own private copy automatically (checksum-verified, no admin rights, nothing added to your system PATH).
 
-## 2.2.2 - Bug Fix Update
+## 2.2.3 - Faster First Start
 
-Fixes for problems found after 2.2.1, and two new per-server switches. Most of these fixes are in the server: hosts must update and restart their server to get them.
+The last update of the 2.x line. It has one change: the preparation of the client data that runs on the first start after an install or an update now runs its steps in parallel. The game itself is unchanged.
 
-### Combat and skills
+### Loading
 
-- **Field PK (forced attack):** On open PvP maps (the maps the game data marks as PvP and not as a safety zone) hold **Ctrl** to attack other players: the cursor turns into the swords, a skill cast while Ctrl is held can hit players, and Ctrl+click attacks at once. Party mates, guild mates, safety zones and spectators are protected, with the game's own messages ("cannot be attacked", "Safety Zone"). Killing a player makes you wanted: other players see your name in purple (red in the heavier chaotic bands; your own name plate does not change colour yet), the value fades with time, and killing a wanted player or fighting on a map marked "no chaotic increase" adds nothing. Damage uses the same rules as duels. The 4 second window that Ctrl arms, the kill counting and the fading speed are the engine's own choice (ENGINE-CHOSEN) where the data is silent. Not in this version: the PK "Safe Time", the tendency window and the death drop penalty.
-- **Half Bagi skills:** The Half Bagi's main attack skills (Wild Slash, Earth Divide, Furious Brandish, Skull Crusher, Burst Slash, the four Dances, Blow of Fury and the three Berserker steps: 13 skills) cost Fury instead of MP, and online they were all refused because the server never filled the Fury gauge. It does now. A landed hit adds 2 % of your maximum MP, a hit taken from a monster adds 3 %, and the gauge drains 0.2 % per second after a 10 second hold at the top (the drain and the 10 seconds are in the game data; the two gain rates are the engine's own choice). The gauge on your screen and the hotbar grey-out follow the server's value.
-
-### Characters and server settings
-
-- **Deleting characters:** Characters can be deleted from the character select screen again. Type the character's name to confirm. A character cannot be deleted while it is in a guild or while the account is in the world; the name is free again afterwards. Before, every delete was refused for online characters.
-- **Starter pack switch (per server):** Dashboard > Settings > "New characters get the starter pack". When it is off, new characters on that server start without the starter kit. Existing characters keep what they have, and switching it on again does not hand the kit out afterwards.
-- **PK switch (per server):** Dashboard > Settings > "Allow PK on open maps (hold Ctrl to attack players)". On by default; when off, Ctrl does not attack players on that server.
-
-### Quests, NPCs and maps
-
-- **Teleport quests that sent you to the map corner:** The Parca Temple "Six Bosses" gate quests (Gate of Challenge / Gate of Qualification), Verdi's "Altar of Terra Entrance" on Requies Beach (Move - Terra's Altar) and Tuban's Favnil's Altar teleport on Avalon Island used to drop you at the corner of the map. The game's location table lists these destinations without coordinates; the engine now uses the arrival point of the neighbouring entry of the same map (ENGINE-CHOSEN). 36 quests had this problem, 34 now arrive at a real position (the Draco Desert and Avalon 11202 entries have no arrival entry and are unchanged).
-- **Sergio's Swift Box (Ardeca):** "Purchase Swift Box" now sells the box: ten purchases per character with the prices of the dialog (195,857 DIL for the first, three times more each time up to 3,855,044,794 DIL), from level 80, with the game's own messages for too little DIL, a full bag and "I don't have any left in stock" after the tenth. What the box contains is the item table's Swift Box (the NPC text gives only the name).
-
-### Interface
-
-- **Personal Shop (Ardeca):** While your shop is open your character now stays where it sat down: walking, click-to-move and movement reports are refused by the server (the game's "The shop is in operation." rule), and the client no longer walks the character. Before, a character could still be moved around while it was selling.
-- **Party members on the minimap:** The minimap shows the members of your party that are on your map as dots, and as arrows on the edge of the minimap when they are out of view. Hover a dot for the name.
-- **Guild of Glory emblems:** The glowing guild emblems from the shop (Guild of Glory) can be used: the guild leader uses the item, confirms, and the guild's emblem on name plates gets a golden glow (the Alliance of Glory glows the same way). Only the guild leader can use it and the item is used up. The guild mark NPC's delete option removes the glow first (the mark itself stays). The glow look is the engine's own choice.
-
-### Messages
-
-- **DIL and EXP lines:** A kill prints only "Obtained EXP: [ N ]". DIL drops on the ground and "Acquired DIL: [ N DIL]." appears when it is picked up (by you or by your pet), as in the original game. The old combined line showed a DIL number that was never paid. Picked-up items print the game's "[Message] <item> has acquired <count>." line.
+- **First start after an install or update:** The preparation used to take about 5 minutes (315 seconds on my PC) because its 21 steps ran one after another. Steps that do not depend on each other now run at the same time: the same preparation took 77 and 89 seconds in two runs on a 6-core PC with 32 GB of RAM (3.5 to 4 times faster; a PC with fewer cores gains less). The prepared files are identical to what the old order produced: compared file by file, every byte is the same except the time stamps inside 17 of the 57 data files.
+- **How many steps run at once:** up to 4, fewer on a PC with fewer than 5 cores, and at most 2 on a PC with less than 6 GB of RAM (4 at once used up to 3.8 GB of memory on my PC). Set the environment variable `DEKARON_PREPARE_JOBS` before starting the launcher to choose another number; `DEKARON_PREPARE_JOBS=1` runs the steps one after another as before.
+- **Safe on errors:** if one step fails or you close the launcher, all running steps are stopped before anything is cleaned up, and the previously prepared data stays in place.
+- **One more preparation after updating:** the preparation program itself changed, so every install prepares once after updating to 2.2.3 (about 1.5 minutes now).
+- **Changes to the channel files are noticed:** the preparation did not look at the channel rule files (`channel-data.mjs`, `channel-rules.js`), so editing them did not rebuild the prepared data. It does now.
 
 ## 2.2.0 (2026-10-04)
 
@@ -80,6 +62,13 @@ Fixes for problems found after 2.2.1, and two new per-server switches. Most of t
 - **Disk space:** Desktop game windows no longer leave their throw-away browser profiles behind (16 GB had piled up).
 
 ## Older updates
+
+<details>
+<summary><b>2.2.2</b> (2026-10-07, shipped inside 2.2.3)</summary>
+
+Bug Fix Update (2026-10-07): Ctrl field PK with a per-server switch, the Half Bagi Fury skills, deleting characters, a per-server starter pack switch, teleport quests that landed in the map corner (Parca Temple, Requies Beach, Avalon), Sergio's Swift Box, party members on the minimap, Guild of Glory emblems, the DIL / EXP chat lines, and the Personal Shop seller no longer moving. The full notes are in [CHANGELOG.md](CHANGELOG.md).
+
+</details>
 
 <details>
 <summary><b>2.2.1</b> (2026-10-07, shipped inside 2.2.2)</summary>
