@@ -1,119 +1,270 @@
-**[Download Alpha 1.0.1 — normal ZIP, no password](https://github.com/waveforgemp3app-cmyk/Tool/releases/tag/v1.0.1-alpha.1)**
+# Dekaron Online — One Client & Engine
 
-# Dekaron Engine — Alpha 1.0.1
+**1-Click Installer • Full Release • Multiplayer • GM Tools • Item & Map Builders**
 
-**Normal ZIP download — no archive password required.** Extract the ZIP before running anything. This package contains accessible engine source/runtime files and Client.exe; it is not another SFX wrapper.
+**Current release: 2.2.1 Update.** This page always describes the newest build, the latest changes and the full feature list. The complete fix history of every version is in [CHANGELOG.md](CHANGELOG.md).
 
-## Setup in three steps
-1. Fully update your compatible Global client, close the game/updater, and keep a separate full backup.
-2. Extract Dekaron-Engine-Alpha-1.0.1.zip. Put its complete engine folder beside your data and bin folders, then open engine/Client.exe.
-3. Review the cleanup warning, click Start, let preparation finish, then sign up or use the local owner sign-in option. Choose the desktop client or browser.
+## Download
 
-**Existing users:** stop your server and back up accounts, saves, settings and projects before replacing engine code. This ZIP is a manual package, not the old managed SFX installer. Do not delete private state to force an update; use a separate fresh client folder if unsure.
+- **[Download Dekaron-2.2.1.zip (GitHub, latest release)](https://github.com/waveforgemp3app-cmyk/Tool/releases/latest)** — no password.
+- Source (plain files, for inspection): `Dekaron-2.2.1-source.zip` on the same release page.
+- [VirusTotal scan (Dekaron-2.2.1.zip)](https://www.virustotal.com/gui/file/8d974b6d8ffa5089a55d272f1dac5a3c78959e2c73ed5f57934a8e0ff9af1fa5)
+- [VirusTotal scan (Dekaron-2.2.1-source.zip)](https://www.virustotal.com/gui/file/f5807a3c48c36e4ef5e1aaf3859a993461697dfeba6730c738396fcdaf6d6240)
 
-Windows PowerShell/.NET Framework and Chrome or Edge are required. A compatible Node.js 20+ is reused or a pinned official runtime is downloaded over HTTPS and SHA-256 checked. Three.js is included. First preparation can take several minutes.
+**VirusTotal (full details)**
+- VirusTotal at upload (2026-10-07): 5 of 65 engines flag the installer zip, 6 of 66 the source zip. Flagged by: Bkav Pro, Elastic, Malwarebytes, MaxSecure, SentinelOne (installer zip); Bkav Pro, Elastic, Kingsoft, Malwarebytes, MaxSecure, SentinelOne (source zip).
+- No engine names a malware family. The labels are generic machine-learning scores (for example "MachineLearning/Anomalous", "susgen" or "Suspicious Archive"). Microsoft, Kaspersky, ESET, BitDefender, Avast, Sophos and CrowdStrike report nothing.
+- Likely reasons (not proven): the executables (`RUN-ME-FOR-GAME.exe`, `Client.exe`, `Dekaron.exe`) are not code-signed, have no publisher and only generic version info; every build is a brand-new file without reputation; a game launcher that starts PowerShell scripts, runs a local server and opens a local port looks like what droppers do; the installer is a compressed self-extracting archive ("Suspicious Archive"); the source zip shows the scripts as plain text. The exact cause has not been established. Code signing and version info are planned.
+- Check it yourself: the source zip holds the same files as plain text, the installer carries exactly those 1,471 files, and the SHA-256 values in the table match the scan pages.
 
-## Changes in this patch
-- Added server-wide world chat with a cooldown; /global maps to world and /map maps to map-wide shout.
-- Improved first-person target selection with bounded aim assistance.
-- Added one bounded retry for transient auto-attack range rejection while the same live target remains selected.
-- Adjusted enhancement highlights toward warm gold and strengthened the shimmer.
-- Repaired the Battle Support Start/Cancel handler and prevented its loop from interrupting a busy skill. Full panel skill assignment and in-game acceptance remain under review; this is not a claim that all Battle Support options are complete.
-- Rebuilt Client.exe and provided a normal ZIP for users unable to extract the SFX.
+| File | SHA-256 |
+|---|---|
+| `Dekaron-2.2.1.zip` (installer + README, no password) | `8d974b6d8ffa5089a55d272f1dac5a3c78959e2c73ed5f57934a8e0ff9af1fa5` |
+| `Dekaron-2.2.1-source.zip` (plain engine files, for inspection) | `f5807a3c48c36e4ef5e1aaf3859a993461697dfeba6730c738396fcdaf6d6240` |
 
-## Verification for this package
-Launcher compilation, runtime download/hash and failure-path tests, 37 installer fixture checks, preparation/reuse checks, three validate-only launcher location smoke cases, signup tests, targeting/retry tests, and world-chat/mail/guild tests passed. Guild tests verify supported existing behavior, not every Global guild feature.
+Download the release file, not GitHub's automatic "Source code" ZIP. The ZIP contains the engine only — no official game files, no accounts, no database to install. It reads the data from **your own, fully updated Dekaron Global installation**.
 
-The 1,276-file payload and extracted ZIP passed manifest/hash and privacy scans. Private accounts, local host configuration, logs, original game data and caches are excluded. Known machine/owner identifiers and credential patterns were checked. This is a bounded audit, not an absolute privacy guarantee.
+### Install in 1 click
 
-**No new full clean-install-to-rendered-game acceptance run was performed for this ZIP.** Earlier Alpha 1.0 installer results do not count as tests of this new package. Remaining visual, mount, Battle Support and gameplay reports still need in-game acceptance; zero lag and complete Global parity are not promised.
+1. Install and fully update your Dekaron Global client. Close the game and the official updater. **Back up the whole game folder.**
+2. Extract `Dekaron-2.2.1.zip`. Inside are **RUN-ME-FOR-GAME.exe** and **README.txt**.
+3. Run **RUN-ME-FOR-GAME.exe**, confirm your game folder (the Dekaron folder containing `data` and `bin`, not either subfolder), click **Start** and confirm the setup prompt.
+4. The first preparation reads your game data (a few minutes, once). A **Dekaron Online** desktop shortcut is created — from then on just double-click it.
 
-SHA-256 (checksum, NOT a password):
-`3294fc3e556430fc84f09d73d5a156416cc87ad1460db1b7112857080e85f0e9`
+Already installed? Open the launcher and click Start — a ready installation launches straight away.
 
-## Play in first person or third person
+> **Important:** the first setup cleans the game folder root and keeps only `data`, `bin`, `engine` and `Client.exe` (the official launcher/updater is removed) and creates no backup. The launcher shows the exact list and asks you to confirm. If preparation fails nothing is deleted. Keep your own backup.
 
-- Switch between the normal third-person camera and optional first-person view with a configurable field of view and remappable POV binding.
-- First person presents your equipped native body, arms and weapons, retaining their original animation data. On-foot legs follow the view heading without changing server movement or attack authority. Mounted presentation keeps the native rider/seat relationship.
-- Skill and buff effects remain connected to the local presentation. TransUp hides incompatible wings and restores them afterward.
-- Mounted first person retains native vehicle/seat geometry and holstered equipment. Switching views reuses its prepared presentation. TransUp uses native hands/forearms with a separate body view to avoid oversized shoulder armor filling the camera.
-- Warm golden enhancement waves repeat every few seconds while leaving base armor and weapon detail visible between peaks. Lower enhancement families retain their source appearance.
-- Full eligible weapon sockets produce blade-shaped, pulsing native-color auras. Fire, ice, lightning, poison and curse retain their original effect selections. Full stat-stone sockets use the native default effect through a labeled reconstructed presentation policy; empty and partial sockets do not receive a full-socket aura.
-- Selection scenes, gameplay equipment and cached inventory previews share the refinement material policy. Enhancement highlight math and blade-shaped aura coverage are reconstructions, not a claim of exact original-executable rendering.
-- Character framing, animated equipment, native UI artwork/fonts, supplied map/model/texture data, available sounds, scenery fog flags and normal distance/frustum culling are supported.
+**Requirements:** Windows 10/11, Chrome or Edge, and your updated Global client. The DX11 Client uses the Microsoft Edge WebView2 Runtime (part of Windows 11). Node.js is used if you already have it; if not, the launcher downloads its own private copy automatically (checksum-verified, no admin rights, nothing added to your system PATH).
 
-## A shared world with server-owned gameplay
+## 2.2.1 - Latency and Frames Update #1
 
-Create separate accounts and characters on each server, then play in the same world. Supported movement, targeting, combat, skills, equipment, inventory and progression are validated by the server rather than accepted as client-written results.
+This update is about latency and frame rate: big fights, the HUD ping, loading and smoothness. Everything else that changed in 2.2.1 follows after it, grouped by topic.
 
-- First click selects an enemy; a second click starts an attack. Skills cancel auto-attack. Out-of-range targeted skills approach their bound target, then cast when the authoritative position reaches range; manual movement, target death and map changes cancel the pending action.
-- Auto-attacks now check server-confirmed player and monster positions before stopping the chase or sending a hit. This repairs attacks rejected as out of range while the predicted model appears beside the monster. Held movement also retains its bounded prediction through delayed updates instead of repeatedly tugging backward.
-- Repeated NPC clicks preserve the active route. Approaches stop before dialogue or the first attack swing. Nearby pickups avoid an unnecessary fallback movement jump.
-- Idle monsters now explore using native walking speed, home radius and rest timing, with collision checks. Combat return remains separate; stationary objects, traps and protected boss patterns do not acquire roaming routes.
-- Supported quests, loot, shops, item boxes, equipment enhancement and conversion, storage and server-table rewards.
-- Parties, durable trade, supported mail/attachments, guild creation and membership, notices, funds, donations, explicit supported guild level-up and private guild chat.
-- Companion pets, following/autoloot/bags/options/blessings and supported awakening, combination, appearance, restoration and disassembly services.
-- Transport mounts, summon/dismiss preparation and riding/map/skill checks; authoritative fishing, profession crafting and DekaPass progress/claims.
-- Isolated dungeon runs and available native dungeon/event adapters, including supported cooperative Dead Front and Ice Castle behavior. Individual scripts, phases and rewards still have documented limits.
+### Latency and ping
 
-## GM Command Center
+- **Ping:** The HUD ping shows the real network time of the game's own requests to the host and no longer rises when the frame rate drops. 2.2.0 showed about 3 times the frame time, so a fight at 8 frames per second read 400 ms even on a fast link. With the host on your own PC the label now reads about 3 ms at every frame rate (before: 46, 166 and 402 ms at frame times of 12, 50 and 118 ms); with 80 ms of added network latency it reads 95-97 ms and stays there while the frames slow down (before: 115 ms, climbing to 402 ms). In a 10-minute scene with 70-450 monsters the average label went from 57 ms to 2 ms. The tooltip still shows the frame time next to the ping.
+- **Big fights no longer freeze:** A skill that hits 50 monsters several times creates about 200 damage numbers at once, and each one cost 7.6-9.0 ms because the number sprite sheet was copied into every digit. In my test one Tempest Wing on 50 monsters held the screen for 1.3-1.6 s in a single frame (frame times 1,564 / 1,330 / 1,296 ms for three casts); now the worst frame is 25-42 ms in the final runs and 59-159 ms in earlier runs while the PC was busy with other work. Eight area skills in a row, 1.5 s apart: worst frame 1,334 -> 63 ms and the HUD ping peak 904 -> 122 ms. A number now costs 0.01-0.08 ms instead of 7.6-9.0 ms (about 150-300 times less) and numbers above the 60 that can be on screen are not even built. The numbers look exactly the same. Measured on a Ryzen 5 3600X, RTX 3070, 1080p.
+- **Chat during mass kills:** The chat and system-message boxes read their size three times after every added line, and every read forced a new layout. They now do it once per batch of lines, before the next picture is drawn. 200 kill messages at once: 589 forced layouts -> 8, 110.7 ms -> 2.1 ms in the loop; 800 kills (the size of a /gm killall): worst frame 516 ms -> 54 ms. The chat looks and scrolls exactly as before.
+- **Kills on the server:** Every kill built a full quest context (a deep copy of your character plus the whole quest database) even when none of your quests cares about that monster. The server now builds it only when one of your active quests can react to the kill; quests with kill objectives take the same path as before. Measured on a running server: /gm killall of 817 monsters, command answer 2.6 / 3.1 / 2.5 s -> 0.18 / 0.09 / 0.11 s; an area skill that kills 50 monsters, longest server stall 199 / 143 / 112 ms -> 27 / 12 / 10 ms; 90 monsters 122 / 140 / 96 ms -> 47 / 19 / 42 ms; per kill 3.1 ms -> 0.11 ms. With a very large character (285 KB) a 817-monster killall took 13-35 s before and 0.2-0.5 s now. Quest progress, events and drops are unchanged. Hosts have to restart the server to get this.
+- **Skills respond at once:** The cast animation and the cooldown sweep start as soon as you press the key instead of after the server's answer; the host's answer confirms it, and a refusal or a timeout takes it back (dash, teleport and instant-projectile skills, mounted casts and skills that pick the nearest target still wait for the server) (first visible reaction after the key press 266 ms -> 9 ms in tests with a simulated 80 ms ping, measured with the 40 active skills of the Incar Magician). A key pressed while a skill is still playing is queued on the host (the newest press wins) instead of being answered "Skill is busy": in a chain of 6 skills one second apart, 6 of 6 now cast (3 of 6 before). When a skill cannot be used, a message appears next to your character as well as in the chat (the same text at most every 1.5 s); a press on a target that has just died gives the game's own message. The host also answers a cast without waiting for the account save. Cooldowns, MP costs and range are unchanged.
+- **Quick skill presses:** A skill press no longer disappears without a message: when you press several skills quickly, each press is either cast or you are told why not (for example "Replaced by a newer skill press."). Before, one shared flag dropped every press silently while any cast waited for the host. Energy zap pressed 30 times: 5 presses dropped silently before, 0 now. Six different skills pressed 120 ms apart: 1 cast, 2 "busy" refusals and 3 silent drops before; 2 casts and 4 reported replacements now.
+- **Cooldowns:** The hotbar cooldown now ends together with the server's cooldown (it is shortened by the time the answer needed to reach you), so a skill pressed the moment it is ready is no longer greyed out. With a simulated 80 ms ping the difference between the two went from about 80 ms to about 15 ms (median).
+- **Skill messages:** Skill messages from the server now show the game's own text (for example "You don't have enough MP.") instead of a bare number like "(20)": the host now loads the game's skill message table.
 
-Authorized GMs can open the searchable Command Center with **F10** or **/GM**. Search locates tools, tabs and commands without executing them.
+### Frame rate and smoothness
 
-- **Commands:** original command syntax/help and supported command controls.
-- **Monsters:** searchable catalog, model previews, original drop lookup, supported spawning, kill/respawn and AI controls.
-- **Items:** searchable catalog/spawner, owned-item editing, box contents and original item previews.
-- **Teleport/NPCs:** map, destination, NPC and minimap lookup with server-validated safe arrival.
-- **Character:** supported level/EXP/DIL/D-Shop allocations, stats/reset, grade points, skills/buffs, heal/revive, permitted GM flags and renaming.
-- **Players:** live map markers, filters, selection, zoom/pan and supported selected-player operations.
-- **Inventory:** authorized online/offline inspection and supported transfers involving equipment/presets, inventory, personal stash, cash and supported storage, with binding/capacity/concurrency checks.
-- **Quests/World/Drops:** supported quest operations, drop inspection, notices, player counts and moderation; local time/weather/sky/music and visual inspection tools have their stated scope.
-- **Tools:** model viewer, UI window browser, performance/debug geometry, event log, position and save tools. Local save editing is not an online progression import path.
-- **GM fly camera:** detach from the standing character, inspect with WASD/QE, Shift and mouse look, then return. This does not grant avatar noclip.
+- **Frame rate:** Frame rate in towns roughly doubled or better in our tests (about 60 fps before, about 100-160 fps now depending on what is on screen, on a mid-range PC), and the stutter spikes in town are gone. Fields gain less (about 90-100 fps before, about 110-130 now). Measured on my PC (Ryzen 5 3600X, RTX 3070, 1080p) with the same scenes before and after. Town: standing in Ardeca, with 10 other players, running and with three windows open; field: Deneb with 160 monsters idle, fighting and running. The main thread of the browser is the limit, so very high rates are not reached in every scene.
+- **Less work per frame:** This is where the frame rate above comes from. The picture is unchanged.
+  - Glowing gear: the glow pass sees the same lights as the main pass, so every lit material is no longer checked twice a frame (town script time 29.6 -> 23.9 ms on a fully loaded PC).
+  - Props and rigs: animated props and instanced groups are culled per instance, use a shared-geometry draw path and update skeleton matrices only after a pose (town script time 20.7 -> 11.8 ms, draw calls 653 -> 266). A prop's first draw is no longer delayed to the moment the camera turns.
+  - Sun shadow: above about 120 fps the shadow map is redrawn every 2nd frame (any change forces a draw); below 120 fps nothing changes.
+  - Characters: the bone texture is uploaded only when the pose changed (12-13 % fewer uploads); above about 120 fps distant bodies are posed at 120 / 80 Hz (43 % fewer animator updates in town); hair and cape springs carry the skipped time.
+  - Distant scenery: animated scenery is posed every 2nd or 3rd frame beyond 30 / 60 m.
+  - Bookkeeping: status effects skip actors without statuses (131 -> 9 microseconds), standing remote players are not re-placed every frame, the connection panel makes no DOM writes when idle.
+  - HUD: the canvas rectangle is cached (HUD step 0.27 -> 0.06 ms with windows open); name plates, floating numbers, minimap arrow / radar / labels and belt cooldowns are written only when they change.
+  - Shaders for new monster bodies and item-icon renders are compiled in the background before they are drawn.
+- **Max FPS:** The game has a new frame pacer: the Max FPS options 144 and 165 now hold their rate on a 239 Hz screen (143.9 and 164.9 frames per second measured; they used to deliver 119.5), and 75 delivers 75.0 (was 78.8). It handles stalls and window refocus without catch-up bursts, and Unlimited is a pass-through. A limit can only be held when the game itself can render that fast.
+- **Instant loading:** The game tables (items, skills ...), the map's textures and meshes and the window art now load while you are at the login and character-select screens (up to 12 maps are prepared), and a gate's destination map is prepared in the background as you walk up to it (within 40 cells, maps you have visited before). Loading screen into Ardeca: 8.3-10.2 s -> 2.4-3.6 s (after 5 s at character select); the very first start: about 11 s -> 6.2-6.9 s. Returning to a map you already visited: 3.8-9.3 s -> 1.1-1.7 s. Times measured on my PC.
+  - The D-Shop icons: only the first page is prepared while the game loads; the next pages of each tab and Wings pages 2-3 are prepared after the world is shown, at the lowest priority. 2.2.0 tried to bake the whole Wings catalogue (9,421 wings) in the background, which never finished, kept rendering during play and pushed your own bag icons out of the cache so they were prepared again on the next map load.
+  - Map loads pause the icon prefetch, and Deka Pass reward icons load in the background.
+  - Asset decoding uses between 2 and 6 worker threads depending on your CPU (it was a fixed 2).
+  - The scan for native wings no longer copies about 95,000 item rows.
+  - The items, life and extras systems start their module loads in parallel, and joining the shared world overlaps NPC placement.
+  - The shop page queue sorts and pumps once per batch.
+- **First-time hitches:** The first time a monster kind died, its fading corpse needed a new shader and the game froze for 100-452 ms at that moment (3-8 such frames in the first minutes of a fight with 70 monsters, more when an area skill killed several kinds at once). The game now builds that shader in the background as soon as the monster is loaded, and the five Dil pile models are built while the map loads (in a 10-minute test with 70-450 monsters those frames went from 3-8 to none). The first buff on your own character in a session can still cost one frame of about 0.25-0.3 s. The price: the very first load of a field map can take about 0.7-0.8 s longer (later loads show no difference).
+- **Mass-kill loot:** When hundreds of items drop at once (a mass kill), their name labels are now built over the next few frames instead of all in the frame the drops arrive in: the work for 411-446 drops fell from 82 ms to 18 ms and the frame that receives them from 192-222 ms to 163-180 ms. The items themselves appear and can be picked up at once; the labels of a very large burst fill in within about a second (0.7 s on a slow 12 fps scene).
 
-GM access comes from the authenticated server account. Ordinary accounts see the POV binding without GM/editor controls. The server checks privileged requests independently of visible UI; editing browser HTML cannot grant server privileges. Revocation, disconnect and server replacement clear stale capabilities and private tool state. The installation owner can grant/revoke permitted roles through the protected Accounts controls.
+### Combat and skills
 
-## Item Builder
+- **Auto attack:** Normal attacks in online play now deal damage on every swing of the combo (before, every second swing was skipped). Tested online with all 15 classes, 12 swings each: 90 of 180 swings dealt damage before, 180 of 180 now; with 80 ms of added delay (Segnale, Alokes, Segeuriper) 15 of 36 -> 36 of 36. Offline play was never affected. The host's limit on hits now follows each class's own combo timing from the game data instead of a flat 1,000 ms; hitting faster than the combo is still refused. Hosts have to restart the server to get this.
+- **Attack effects:** Normal attacks of Segnale (red whip) and Trie Muse now play the attack effect from the game data, on your own character, on other players and in first person. Fixed along the way: a double effect after a body reload or gear change, an effect left running after an interrupted swing (it is cut before 90 % of the clip), and no effect on the first swing after login.
+- **Summons:** Other players now see your summon's body (Vicious Summoner summons used to show only a name plate to other players). Summon circles and other looping cast effects (13 skills in the data loop) stop softly at the end of their combo step and at the end of the skill, on your screen and on other players' screens; before, they stacked up until the map changed. Offline, a summon's arrival burst plays once instead of pulsing under the summon for its whole life.
+- **Other players' skills:** Effects of other players' skills now play to their full length on your screen: a finished cast used to stop every effect on observers' screens (the 60 s Dual Chakra aura showed for 0.7 s; 216 plays in 107 scenes were affected). Now only loops are stopped softly; an aborted cast still clears everything.
+- **Damage over time:** A damage-over-time effect that kills its target no longer leaves an aura restarting on the dead or respawned unit, no longer removes the wrong status and no longer throws an error that cancelled the skill you were casting.
+- **Channel change and map teleports:** Changing channel and the big map's NPC teleports use a 10 second bar titled "Channel": you cannot move while it runs, and taking damage, pressing Esc or Cancel stops it and releases the host's cast (the NPC teleport took 5 s before). Smart Warp stays at 3 seconds. Fixed along the way: Esc used to leave the cast running on the host, the bar now keeps running in a hidden tab, survives a stale snapshot, and only one warp can run at a time. The channel changes 10.1-10.5 s after the click and a hit closes the bar in about 0.66 s.
+- **Select Warp / Party Warp:** The warp bar from the big map is titled "Select Warp" (it showed "Store Game Information") and, like the NPC teleports, takes 10 seconds (it was 3); pressing Esc, Cancel, a map change or death cancels it. Before, Esc closed the bar but the character still teleported 7.3 s later. Party Warp uses the same bar.
+- **Channel change on a mount:** Changing channel while riding is refused with the game's own message "You cannot use teleportation while riding a creature." Before, the bar flashed and closed without a word.
+- **Area skills stay where cast:** Area skills cast around you (Segnale's Curse field, the Protection sanctuary, the Shield field and the rest of that kind: 62 skills, about 50 of them pulse over time) now stay at the spot where you cast them and pulse there for their whole duration instead of following you. The game data has no rule that makes the field move with the caster. In a test with the caster walking 14 m during the field: field centre drift 10.7 m -> 0 m, the field seen by another player 9.9 m -> 0 m, hits on two monsters standing in the spot 8 and 5 -> 10 and 10 (of 10 pulses), hits on three monsters next to the walking caster but outside the spot 15 -> 0. A caster who stands still sees exactly the same pulses and damage as before.
 
-Search, use or clone catalog definitions and edit General, Stats, Options and Look pages:
+### Monsters
 
-- Names/descriptions, kind/slot/rank, class masks, requirements, prices, stacks, trade flags, bag footprint, sockets and supported rolled spawn options.
-- Damage/defense/PvP fields, range/speed/critical, upgrade level, HP/MP use and lifetime; six base options, seven additional options and supported set-bonus selection.
-- Per-class model/material/texture, second-hand model, inventory model/icon, supported action tables and explicit asset keys.
-- Character/model previews, class/animation selection, turn/zoom and definition detail.
-- Save, clone, spawn, equip and project export/import, with server-controlled custom definitions and validated asset limits.
-- Supported rigid textured GLB attachments, including Meshy-compatible imports, with axes/scale/transform/tint controls and geometry/material inspection. Arbitrary skinned armor and automatic retargeting are not supported. Adding a data field does not implement an otherwise unsupported game mechanic.
+- **Monsters leaving a fight:** Monsters no longer heal (+35 % per second, full heal on arrival), turn immune (every hit a miss), run home at 1.15 times their speed or snap home when you walk away from them: they stop chasing, take the state the game data names for giving up, stay hittable and fight back if you hit them again. Offline and on the server. A Crocuda stayed at 223 HP after giving up and every hit landed (before: 118 -> 375 HP in 4.3 s and every hit a miss). Damage a monster has taken is also kept in offline play after you walk far away and come back (a hurt monster that is streamed out keeps its HP fraction; killed monsters still respawn at full HP).
+- **Monsters follow their own data online:** Every monster now uses its own sight range, give-up distance, run speed and attack reach from the game files. The server used to cap them all at 20 cells of sight, 40 cells of chase, run speed 6 and reach 8, so long-range monsters (Taron sees 200 cells, archers shoot from 14) acted like ordinary melee mobs. The 92 call-for-help monsters (Yetarian, Lizardman Knight ...) now call up to 2-3 idle neighbours on the first hit online. A monster fights whoever caused it the most hostility (first-hit bonus, a cap, a 30 s memory) and only switches for 20 % more; a plain hit adds hostility by class as the data says, and a summon's hit counts once instead of twice. Slows, roots and sleeps work on monsters on the server; event objects and traps never fight back.
+- **Monster archers online:** Monster archers online play their full shot: the swing holds the animation's own length (it was cut at 0.7 s; the Yetarian Bow is 1.4 s long), uses the attack block's own clip and the archer faces its target (before it shot in its random spawn direction). A monster mid-swing no longer flinches.
+- **Follow limit:** A monster only follows a target while fewer monsters than its own follow limit from the game data (the follow-target value of its row) already follow that target. Field monsters mostly have 2, 3 or 4 (88 % of the field spawns: 3 on 57 %, 4 on 23 %, 2 on 8 %; a few have 5-10 or 20-30, about 7 % have no limit). Dungeon monsters carry their own values and most have no limit (73 % of the dungeon spawns have 50, 100 or no value, the rest 2 or 15); nothing special-cased, applied as the data says. With 50 monsters around you, 3-4 chase you and the rest wait instead of all 50: followers 50 -> 4 or 3, hits on the player 13.8 -> 1.3 per second (24.6 -> 1.3 with area skills), host events down 58-96 %. Every player is a separate target, so a party of two is followed by about 4 + 3 monsters; online, a summon does not raise the limit (the host's monsters only target players), offline it counts as a target of its own. A monster whose top target is full tries the other players it hates. The limit does not change the frame rate by itself. Hosts have to restart the server to get this.
+- **Roaming after a chase:** Monsters keep following you wherever you lead them: you can pull them across the whole map and they never walk back to their spawn point. A monster you outrun roams normally around the spot where it ended up (only monsters that roam at all; the others stay where the chase ended) and returns to its spawn point only after it dies, when it respawns there. Aggressive monsters follow on by themselves while you stay in their sight; a passive monster that gave up needs another hit to follow you again. In a test, monsters followed a player 120-134 cells away from their spawn.
 
-## Map Builder
+### Items and loot
 
-Create blank or source-map projects and use terrain, objects, spawns, NPCs and portals from one editor:
+- **D-Shop Wings:** While the D-Shop is open the icon queue now runs 4 jobs at a time instead of 2, so paging through the wings shows icons sooner: the mean icon wait on pages 3-12 went from 755 ms to 538 ms (-29 %).
+- **Pickup key:** The pickup key (Space) picks up one item per press. Before, one press sent a request for every drop within 3 m (up to 4, with 5 duplicates at 120 ms latency) and a closer drop replaced the item you were walking to, so you bounced from item to item. Now a press while a pickup is still running does nothing and the next press takes the next item (most requests from one press 4 -> 1, duplicate requests 17 -> 0, replaced walk orders 2 -> 0 over seven pickup situations at 0 and 120 ms latency; with 14 presses beside the drops, one burst took 16-20 items before and at most 12 now). Clicking an item and pet pickup work as before.
+- **Ground items:** The mouse cursor turns into the hand (the game's grip cursor) when it is over an item on the ground, and holding Alt (View Drop Item Name in the key list) shows the real name of every item on the ground in its grade colour (before, the key labelled every item "Item" in white). Clicking an item to pick it up works as before.
 
-- 64/128/256/512 terrain sizes; project save/open/resize, .dkmap import/export, minimap capture and local play preview.
-- Move/rotate/scale, duplicate/delete, multi-selection, shared gizmos, inspector properties, surface/grid snapping and undo/redo.
-- Raise/lower/smooth/flatten/noise/vertex-color terrain brushes with radius/strength/falloff controls and useful presets.
-- Ground types/variants, holes/fill, texture decals, water placement and visibility, and collision painting.
-- Searchable object and monster libraries, NPC service selection and original/published portal destination pickers.
-- Grid/collision overlays, terrain texture sets, lighting/sky, clipping distance, time/music, level gates and return-scroll policy.
-- Validated custom-map publication, revisions and restart persistence. Supported occupied custom-map updates use version checks, collision/placement updates and safe relocation; active gameplay transactions can refuse an unsafe update.
-- Keyboard/mouse free-fly and first-person inspection. **Xbox-style controller support is for Map Builder only**, with navigation/tool mappings and focus/disconnect guards; it is not advertised as gameplay controller support.
+### Interface and options
 
-Original-map editing and shared brush sessions have their own documented constraints; do not assume every custom-map operation is available for native fields. Export browser-local drafts before clearing browser data.
+- **Esc:** With a target selected, one press of Esc opens the system menu (and releases the target). Drags, dropdowns and windows that close with Esc still take the press first.
+- **Target plate:** Monster (and other player) buffs and debuffs now show on the target HP plate online, in the 8 original slots, with their icons from the status table and tooltips that count down.
+- **Cursor:** The game's golden cursor is shown over every window and on the login, character-select and loading screens, not only over the 3D view. A missing cursor texture no longer causes an error.
+- **Window:** The DX11 Client opens as a 1280 x 720 bordered window that fits your screen (a saved size larger than the work area is ignored); fullscreen is remembered only when you chose it, F11 is no longer undone, and the window-mode setting in Options reaches the Dekaron.exe window. In the desktop client a window size that does not fit the desktop is not applied (a note shows instead).
+- **Map window (M):** The Map window opens with no NPC selected, and the selection is cleared when you close it. Clicking an NPC marker on the map selects it and its marker pulses gold (or red) on a 5 second cycle.
+- **Damage numbers:** When many monsters hit you at the same moment their damage numbers now appear at the same spot over your head instead of each new number being lifted above the last (the game's damage-number data has no stacking rule). With 50 hits in one moment the highest number was 16,000-87,000 px above the head before and is 80 px now, the same as a single hit. A single number is unchanged, and the small random sideways offset and the cap of 60 numbers stay.
 
-## Inventory and quality-of-life improvements
+### Server and hosting
 
-- Cached inventory previews, transient asset retry, held-item feedback, readable native gem symbols and equipment-comparison tooltips.
-- Three-socket weapons and four-socket staffs/large hammers use centered vertical gem columns; eligible four-socket armor keeps its centered 2×2 arrangement. Empty sockets remain empty holes.
-- Owned-stack potion/buff belt use, native cooldown sweeps and save/relogin handling.
-- One-, two- and three-row skill layouts; the buff HUD now uses all three native skill rows instead of dropping entries after ten. Supported status icons can be repositioned within remembered bounds.
-- Hotbar weapon and native TransUp-stage requirements grey unavailable skills, while learned skills retain color when only MP is short. Activation skills remain available before the required transformed action mode.
-- Native weapon swapping and alternate layouts retain cast restrictions. Character-name colors/lengths, overhead text and numeric monster HP received targeted checks.
-- Nearby authored architectural gates/trees remain visible under the corrected occlusion handling. Original return-to-character/login flows and GM Save & Stop Server are retained.
-- Edit Current remains open during temporary world-busy synchronization instead of treating it as a lost login; real permission or session loss still closes privileged tools.
+- **Busy servers:** The server does much less work per tick with very many monsters: each scene is checked for frozen state and viewers once per tick; idle monsters stand still when no player is near; each snapshot row is built once per broadcast and a snapshot lists only the nearest monsters; the skill status pass runs once per tick; broadcasts are sent in short slices; and a kill's reply no longer waits for the account to be written to disk (2.2.0 waited for every kill; saves now run in the background and merge).
+- **Hosts:** Restart your server after updating: the auto attack, kill, follow-limit, area-skill and monster fixes above are in the server, not only in the client.
 
+### Everything else
 
-## Feedback and documentation
-Bug reports are welcome—please include your version, class, skill/item and reproduction steps. I appreciate the feedback and will investigate reports. Never include credentials or account files.
+- **Party EXP:** The party bonus uses each map's own row of the group EXP table (by member count, capped by the group size) instead of the first row everywhere. Because of this the client data is prepared again once on the first start.
 
-[Feature catalog](https://github.com/waveforgemp3app-cmyk/Tool/blob/main/docs/FEATURES.md) · [Tool gallery](https://github.com/waveforgemp3app-cmyk/Tool/tree/main/docs/showcase)
+## 2.2.0 (2026-10-04)
 
-Independent project, not affiliated with the original publisher. Bring your own compatible client data. Original game assets are not distributed; third-party notices remain applicable.
+- **DX11 Client (Dekaron.exe):** The game opens in its own native window, Dekaron.exe, drawn through Direct3D 11 (Microsoft WebView2 host). It only opens after you sign in through the launcher and then signs you in by itself. It opens at 1280 x 720; a resolution applied in Options sizes the window and is remembered (F11 = fullscreen). Task Manager and the volume mixer list it as Dekaron.exe.
+- **Launcher:** Three labelled ways to play on the sign-in panel and the dashboard: DX11 Client, Desktop App and Web Browser. "Other server..." opens another server with the same three choices. Closing the game returns to the dashboard.
+- **Login:** All three go straight to the login hall (no loading screen) with the server button ready; Server Login enters with your launcher sign-in, no password asked again. The LOGIN SELECT window shows the server logo.
+- **Smooth monsters:** Monster positions are played back on the server's own clock (measured with ~96 monsters: freezes mid-move 1.9 % of frames -> 0, biggest jump 7.93 -> 0.70).
+- **Lag spikes:** First switch to first person 865 ms -> ~45-65 ms; summoning a mount in first person 418 ms -> ~45 ms; Trans Up 400-880 ms -> ~30-40 ms (shaders are prepared when the map loads).
+- **Shield:** Full shield when you log in and when you respawn.
+- **Dungeons:** One broken dungeon in the original files (181) could crash the whole server; now only that dungeon closes and its players are moved out.
+- **Holy Water of Almighty:** Remote mailbox, remote storage and the remote shop work while the service is active; the enhancement bonus (+5 %, not above +11), EXP / DIL / drop scrolls, Party Warp and the Battle helper Potion Set follow the item text. NPC warp from the map needs the premium service (otherwise you walk there); the Deka Pass premium track follows the Global rules. GMs can set VIP Points.
+- **Custom maps:** Ordinary players can enter a server's published custom maps (`/custommap`, the M map list, the Custom Maps NPC).
+- **Disk space:** Desktop game windows no longer leave their throw-away browser profiles behind (16 GB had piled up).
+
+## Older updates
+
+<details>
+<summary><b>2.1.2</b> (built 2026-10-04, shipped inside 2.2.0)</summary>
+
+- **Fresh install:** The local admin gets the 15 max-level showcase characters. Existing admin characters are never touched.
+- **Emotes:** The Action list plays the first emote and the same emote twice in a row; armed characters and GMs no longer have their emote cancelled by the combat stance; a refused emote (dead, fishing, casting, riding) says why in chat.
+- **Battlefields on a normal install:** Arena, DK Square, Training Camp, Race, channels and the observer read the prepared client data (they could fail with "Shared world is temporarily unavailable").
+- **Personal shop:** The window can be dragged by its title bar again; the Shop Name box sits inside its own frame.
+- **Black Wizard orbs:** Orbs with a left-hand model show both orbs and keep orbiting while running and on the character screen (the orbit while running is engine-chosen).
+- **Global updates:** A client table saved with a byte-order mark no longer breaks the rebuild.
+- **Gem glow:** The 1-4 gem brightness steps from 2.1.1 are removed: the game data has no per-gem-count rule, so any socketed weapon shows its authored effect.
+- **GM teleport:** Ctrl+click teleport works online (ground, Teleport-tab minimap, Players-tab map) and keeps working after other GM commands. The HUD minimap no longer teleports.
+- **Map window (M):** Each NPC row has Add / Del (favorite) and Move for everyone, TP for admin / GM accounts; event NPCs show an EVENT tag.
+- **First person:** All 15 classes reworked: weapons that were out of view while standing (Incar and Summoner staffs, others) are visible, oversized ones (Azure Knight sword + shield, Trie Muse) no longer fill the screen, the Segita Hunter bow sits at the hand, and the Black Wizard's coat sleeve no longer sweeps across the view. Framing values are engine-chosen / fitted (the game has no first-person view).
+- **Tab weapon swap in first person:** The weapon lowers, swaps and comes back up (about 1 second; engine-chosen, the data has no swap animation).
+- **Shield:** The awakening grade adds its shield amount.
+- **Character and D-Shop previews:** No longer dim (the preview light levels are engine-chosen).
+- **Launcher:** The "List your server publicly?" warning opens with Cancel selected instead of all its text highlighted.
+
+</details>
+
+<details>
+<summary><b>2.1.1</b> (2026-10-03)</summary>
+
+- **Aura glow:** Glowing weapons and refined gear cast a soft coloured halo in the world and in the character preview window, hidden behind walls. Built like the client's own glow and blur pass; radius and strength are fitted to Global screenshots (FITTED, not read from the data).
+- **Icon halo:** Inventory and equipment icons get the wide soft "ghost" halo seen on Global.
+- **Effects through walls:** Gem glow and sparkles no longer show through walls (measured 66,768 stray pixels down to 4).
+- **Refinement orbs:** The +15 / refinement texture scroll no longer jumps back at every loop (largest per-frame jump 0.30 down to 0.003).
+- **Battle Support (Auto Hunt):** The window is back with its real panel art, tabs, close button and radius dropdown (8 / 12 / 16 is engine-chosen). Some option boxes and slot buttons stay inactive because no data says what they do.
+- **Damage numbers online:** PvP blocks show the Block word, heal and MP numbers show, crit and block hit sparks play, and basic attacks can crit on the server using your Critical Rate. Yellow numbers are critical hits.
+- **Exact movement speed:** The server no longer caps speed to 1-6 units/s; buffs and slows match the game data (about 0.7 to 7.9), so speed buffs no longer rubber-band. Covered by a test of 28,980 class x buff combinations.
+- **Saved logins:** "Save account" keeps a server-issued token (never your password) on your PC under Windows protection, bound to that one server. Accounts are per server.
+- **Public server list:** Listing your server asks first with a clear warning and records your consent; a Settings switch turns it on or off without stopping the relay, plus a directory address box and a connection test. The project does not run a public directory.
+- **Host IP protection:** Hosting is relay-only by default (no LAN address is shown or copied); a direct host listens on this PC only until you tick "Allow direct LAN connections". The relay gateway limits 24 connections per address and the directory limits list requests to 60 a minute. Four setup buttons (On this PC / VPS / Vercel / Cloudflare) write step-by-step guides; they deploy nothing. No relay is a DDoS shield by itself.
+- **Launcher tabs:** One tidy grid in the top right: Dashboard, Accounts, Sign up / Hosting, Worlds, Settings.
+- Checked, no change needed: Ardeca's pixelated textures are the map data's own nearest-pixel filtering; item sizes follow the game data (bows 2x4, starter Short Bow 1x3, shields 2x3, Dual Blades 1x4); GM Items +11 to +15 exist where the item family goes that high.
+
+</details>
+
+<details>
+<summary><b>2.1.0</b> (2026-10-03)</summary>
+
+- **Refinement glow:** +7 / +9 / +15 armor and weapons glow in their tier colour (+15 purple) in the world and on the character screen, with a slow pulse and a tier-coloured edge light. Colours come from the original tier textures; the rim light and pacing are ENGINE-CHOSEN.
+- **Socket gems colour the weapon:** elemental gems give a glow and mist in the gem's colour in your hands, on the inventory icon and on the character screen.
+- **Auto-attack on moving monsters:** the character keeps chasing until the swing's hit frame will still reach the monster, then lands the hit — no more repeated swings without damage.
+- **D-Shop:** pages, tabs and the Wings catalog no longer open empty; pictures fill in as they finish and the next pages are prepared while you browse. Other windows are built in idle time, so panels open almost instantly.
+- **Download:** a normal ZIP (RUN-ME-FOR-GAME.exe + README.txt) plus a separate `-source.zip` with the engine files as plain files.
+- **Launcher:** first-time setup on PCs without Node.js hardened (the "AppendText" error at 8 % can no longer stop setup).
+- **Inventory:** refined weapons (+7 and up) glow in their tier colour in the inventory; gem weapons show the glow as an outer aura so the texture stays visible.
+- **HUD:** removed a stray crossbow-icon counter that duplicated the buff bar.
+
+</details>
+
+<details>
+<summary><b>2.0.0 — Full Release</b> (2026-10-02)</summary>
+
+- Colosseum, Siege War, DK Square, Arena and the event modes completed (see Features).
+- PvP damage reads all 22 Global PvP option codes (it used 6).
+- Guild storage / skills / board / rankings / alliances, messenger chat, chat item links, party finder, inspect, character trade, name change, personal shops, consignment, coin shops, wing services, skill master.
+- Attendance and connect rewards, DK channels, multi-channel, per-map caps, request / exchange quests, production lists, option-change tables, costume upgrade.
+- Visuals checked against the original formulas: materials, textures, terrain brightness, fog, LOD and view distance, wing animation speed, tooltip and HUD colours. Socket gems use the original effect textures, colours and pulse keys.
+- Correct inventory sizes and socket layouts for every weapon and shield; HP / MP potion icons fixed.
+- Auto-attack stops and attacks as soon as a moving monster is in range; smoother walk / run loops.
+- Compressed game-data/map responses, versioned caching, background image decoding, progress reporting; server performance improved in the tested 52-player scenarios.
+- New native launcher (Dashboard, Worlds, Hosting, Settings, server name on the HUD, instant admin sign-in after a restart); safer first-time installer cleanup.
+- Final 2.0 fixes: Alokes and Trie Muse hand attachment points; inventory / F-slot swaps keep the displaced item on the cursor; costume removal and owner shutdown countdown; Blitz checks the caster's hidden state; a bounded ENGINE-CHOSEN contact allowance (0.5 map cell for 600 ms, once) for normal attacks on moving monsters; natural shield capacity from arithmetic recovered from a legacy server executable with the current Global class coefficients (monster damage bypasses the PvP shield); six top-left HUD buttons in two rows; inventory enhancement previews use the original effect scenes.
+
+</details>
+
+Earlier builds (Release Candidate 2 and 3, Alpha 1.0 / 1.0.1) are recorded in [CHANGELOG.md](CHANGELOG.md).
+
+## Features
+
+A complete alternative engine, client and server for Dekaron. Play solo, host your own shared world for friends, or join someone else's server — plus a full GM panel, an Item Builder and a Map Builder. It uses **native Global data** for classes, skills, items, monsters, maps, quests, shops, events and PvP. Where the data does not establish a rule or renderer behaviour, the reconstruction is documented and tagged `ENGINE-CHOSEN` (or `FITTED` when fitted to Global screenshots). The remaining items and limits are listed below. This is not a claim of complete original-executable parity.
+
+### Client
+
+- Three ways to play, all signed in from the launcher: **DX11 Client** (Dekaron.exe, its own native window), **Desktop App** or **Web Browser**. Straight into the login hall, no password asked twice.
+- Native launcher with Dashboard, Accounts, Sign up, Hosting, Worlds and Settings, live server status and player counts. Start your own world with one click, host it for friends, or connect to a saved server. **Auto-sign in as local admin** on your own installation; "Save account" tokens for other servers.
+- Original login scene, loading screens, character select and create screens with their native maps, framing and animated weapons; all 15 classes with their native models, equipment, animations, skills, skill trees, masteries and trans-up.
+- Optional first-person view next to the normal third-person camera (B switches, remappable), tuned for all 15 classes.
+- Rendering from the data: materials from the original boneanimation / itemmesh / glow shader formulas, each map's own texture filtering, fog and lighting from every map's light file, terrain and sky from the geometry / skybox shaders, authored object fog flags, bloom values per map. Refinement tier glow, gem-coloured weapon mist and the soft aura on glowing gear, hidden behind walls.
+- Loading: tables, map textures/meshes and window art prepared while you are at login / character select; compressed responses and versioned caching.
+
+### World and gameplay
+
+- Server-owned movement, targeting, combat, skills, items, inventory, loot, quests and progression — the server validates what you do. Exact movement speeds from the animation clips; monsters smooth on the server clock; no rubber-banding tested at 0-300 ms lag.
+- Quests, shops, D-Shop and coin shops, item boxes, enhancement, sockets and gems, option changes, production, crafting and fishing; correct item footprints and socket layouts from the data.
+- Parties, party finder, Expedition (3 corps x 7, troop dungeons), durable trade, mail with attachments, messenger chat, world / shout / super chat, chat item links, emotes shared online.
+- Guilds with storage, 72 guild skills, guild board, rankings, alliances, guild war and guild tournament.
+- Pets (follow, auto-loot, bags, options, awakening), mounts and wings (upgrade and shape change), costumes (Transcendence, options, wardrobe).
+- Dungeons and events: Dead Front, Ice Castle, Forgotten Shipwreck roulette, Wanted, Egutt, attendance and connect rewards, Deka Pass.
+- DK channels, multi-channel, per-map level and ability caps, native map data, terrain, scenery, lighting, fog and sound; published custom maps enterable by everyone on the server.
+- Premium / Holy Water of Almighty: Select Warp, Return Point, NPC warp, remote mailbox / storage / shop, EXP bonuses, Party Warp, enhancement bonus, Battle helper Potion Set, Deka Pass premium track.
+
+### PvP and battlegrounds
+
+- **Colosseum** — 16-player Battle Royale (16 > 8 > 4 > 2 > 1, champion and round rewards, B Point) and 2v2 Individual Match with MVP, matching, entry prompt, results and rankings.
+- **Siege War (Zenoa Castle)** — registration, siege tunnels, guardian stones and pendants, empathy capture at Juto, castle ownership, gate fortification, tax ledger.
+- **DK Square** — lobby team PvP (Miseria vs Ricchez) with battlefield HUD and results. **Arena** — Draco Desert Battlefield (4 squads, Sunstone communion, DP tiers, rank board) and Lost Horizon (7-player team battle with stun / skill-lock / meteor stone objectives).
+- Race, mission titles, PvP duels, party PvP, Party War (Dead Front / Ice Castle), guild war hunting, DKR PvP, observer mode, training camp. PvP damage uses all 22 Global PvP option codes.
+
+### Tools
+
+- **GM Command Center (F10 or /GM):** searchable panel with the original command syntax; level, EXP, currency, VIP Points, stats and skills tools; GM flags and moderation; monster and item catalogs with live previews (+11 to +15 items included), drops, spawning, item editing; map / NPC lookup, Ctrl+click teleports, live player map; inventory / storage inspection and transfers; quest and world controls, event logs, model and UI viewers, GM fly camera; owner controls for GM roles — permissions always checked by the server.
+- **Item Builder:** create or clone items (names, slots, ranks, classes, requirements, prices, stacks, trade flags, damage / defense / PvP fields, options, set bonuses, sockets, upgrade values), per-class models and icons with animated previews, **GLB mesh import** (Meshy exports work) with axis / scale / transform / tint controls, save / spawn / equip, import / export projects.
+- **Map Builder:** blank or existing-map projects, terrain 64 / 128 / 256 / 512, `.dkmap` import / export, minimap capture, live preview; raise / lower / smooth / flatten / noise / vertex-colour brushes, ground types, holes, decals, water, collision painting; objects, monsters, NPC services and portals with snapping, multi-select, gizmos and undo / redo; lighting, sky, view distance, time of day, music, level limits; publish to your live server with version and collision checks; free-fly and first-person inspection with **full Xbox-style controller support** (Map Builder only).
+
+More detail: [Feature catalog](docs/FEATURES.md) · [Tool reference](docs/TOOLS.md) · [Hosting guide](docs/HOSTING.md) · [Shared world](docs/MULTIPLAYER.md) · [Preparing a client](docs/CLIENT-UPDATES.md) · [Tool gallery](docs/showcase)
+
+## Hosting — play with friends
+
+- **Your own world:** Start = your local world on this PC. Hosting options = a separate world with its own accounts, name and EXP / DIL / drop rates, Invite only or Open (accounts required). Friends create their own accounts on your server; accounts and characters belong to the server you pick.
+- **Connect:** friends enter your server address (or pick it from a saved list), sign up there and launch. Hosting is relay-only by default and the launcher shows no home address; a direct host listens on this PC only until you tick "Allow direct LAN connections" in Settings.
+- **Online relay:** the host connects outbound to a managed HTTPS relay you control (named Cloudflare tunnel + token); players get the relay address, never the host's. The relay gateway strips forwarded IPs and caps 24 connections per address.
+- **Guided setup:** four buttons — On this PC / My own VPS / Vercel / Cloudflare — write step-by-step guides and files under `hosting-setup\`; they deploy nothing and create no accounts. Docker / Railway / Render templates and a static Vercel / Cloudflare Pages connector are included for a persistent server (see [HOSTING.md](docs/HOSTING.md)).
+- **Public server list:** optional; it asks with a warning, records your consent, can be switched off in Settings without stopping the relay, and only lists on a directory address you set. The project runs no public directory.
+- Closing the game returns to the dashboard while your server stays running; closing the owned-server dashboard or clicking Stop Server saves and stops it.
+
+## Known limits
+
+- Not in the client data, so not invented: the Forgotten Shipwreck team rules, what unlocks Type 9 titles, the weekly shield, several Battle Support (Auto Hunt) option boxes.
+- First person: body / legs when looking straight down are still being worked on; framing is engine-chosen (the game has no first-person view).
+- Premium Holy Water of Almighty extras (account-wide service, daily VIP Points, dungeon-ticket discount) are not built yet: some values are not in the game data.
+- The dashboard "Server capacity" panel is not built yet (the server side works).
+- No relay is a DDoS shield by itself; that comes from the provider. Hosting sends your imported client data to the people you let in — host only for friends who have their own lawful client.
+- Values the data does not establish are tagged `ENGINE-CHOSEN` or `FITTED` in the code; this is not a claim of complete original-executable parity.
+
+## Reporting problems
+
+Open an [issue](https://github.com/waveforgemp3app-cmyk/Tool/issues) or reply on the forum thread. Include the class / map / skill / item, what happened and the exact error text. Blank out passwords, IP addresses, account names and personal file paths in screenshots and logs.
+
+## Rights
+
+Unofficial fan project, not affiliated with or endorsed by the game's publisher. You need your own legitimate Global client. No original game files are distributed. Third-party components keep their own licenses (see [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md) and [DISTRIBUTION.md](DISTRIBUTION.md)).
