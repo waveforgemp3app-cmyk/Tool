@@ -4,6 +4,36 @@ Every version, newest first. The newest build is always on the releases page: ht
 
 Where the game data does not establish a rule, the engine's own choice is marked ENGINE-CHOSEN (or FITTED when it was fitted to Global screenshots).
 
+## 2.2.2 - Bug Fix Update
+
+Fixes for problems found after 2.2.1, and two new per-server switches. Most of these fixes are in the server: hosts must update and restart their server to get them.
+
+### Combat and skills
+
+- **Field PK (forced attack):** On open PvP maps (the maps the game data marks as PvP and not as a safety zone) hold **Ctrl** to attack other players: the cursor turns into the swords, a skill cast while Ctrl is held can hit players, and Ctrl+click attacks at once. Party mates, guild mates, safety zones and spectators are protected, with the game's own messages ("cannot be attacked", "Safety Zone"). Killing a player makes you wanted: other players see your name in purple (red in the heavier chaotic bands; your own name plate does not change colour yet), the value fades with time, and killing a wanted player or fighting on a map marked "no chaotic increase" adds nothing. Damage uses the same rules as duels. The 4 second window that Ctrl arms, the kill counting and the fading speed are the engine's own choice (ENGINE-CHOSEN) where the data is silent. Not in this version: the PK "Safe Time", the tendency window and the death drop penalty.
+- **Half Bagi skills:** The Half Bagi's main attack skills (Wild Slash, Earth Divide, Furious Brandish, Skull Crusher, Burst Slash, the four Dances, Blow of Fury and the three Berserker steps: 13 skills) cost Fury instead of MP, and online they were all refused because the server never filled the Fury gauge. It does now. A landed hit adds 2 % of your maximum MP, a hit taken from a monster adds 3 %, and the gauge drains 0.2 % per second after a 10 second hold at the top (the drain and the 10 seconds are in the game data; the two gain rates are the engine's own choice). The gauge on your screen and the hotbar grey-out follow the server's value.
+
+### Characters and server settings
+
+- **Deleting characters:** Characters can be deleted from the character select screen again. Type the character's name to confirm. A character cannot be deleted while it is in a guild or while the account is in the world; the name is free again afterwards. Before, every delete was refused for online characters.
+- **Starter pack switch (per server):** Dashboard > Settings > "New characters get the starter pack". When it is off, new characters on that server start without the starter kit. Existing characters keep what they have, and switching it on again does not hand the kit out afterwards.
+- **PK switch (per server):** Dashboard > Settings > "Allow PK on open maps (hold Ctrl to attack players)". On by default; when off, Ctrl does not attack players on that server.
+
+### Quests, NPCs and maps
+
+- **Teleport quests that sent you to the map corner:** The Parca Temple "Six Bosses" gate quests (Gate of Challenge / Gate of Qualification), Verdi's "Altar of Terra Entrance" on Requies Beach (Move - Terra's Altar) and Tuban's Favnil's Altar teleport on Avalon Island used to drop you at the corner of the map. The game's location table lists these destinations without coordinates; the engine now uses the arrival point of the neighbouring entry of the same map (ENGINE-CHOSEN). 36 quests had this problem, 34 now arrive at a real position (the Draco Desert and Avalon 11202 entries have no arrival entry and are unchanged).
+- **Sergio's Swift Box (Ardeca):** "Purchase Swift Box" now sells the box: ten purchases per character with the prices of the dialog (195,857 DIL for the first, three times more each time up to 3,855,044,794 DIL), from level 80, with the game's own messages for too little DIL, a full bag and "I don't have any left in stock" after the tenth. What the box contains is the item table's Swift Box (the NPC text gives only the name).
+
+### Interface
+
+- **Personal Shop (Ardeca):** While your shop is open your character now stays where it sat down: walking, click-to-move and movement reports are refused by the server (the game's "The shop is in operation." rule), and the client no longer walks the character. Before, a character could still be moved around while it was selling.
+- **Party members on the minimap:** The minimap shows the members of your party that are on your map as dots, and as arrows on the edge of the minimap when they are out of view. Hover a dot for the name.
+- **Guild of Glory emblems:** The glowing guild emblems from the shop (Guild of Glory) can be used: the guild leader uses the item, confirms, and the guild's emblem on name plates gets a golden glow (the Alliance of Glory glows the same way). Only the guild leader can use it and the item is used up. The guild mark NPC's delete option removes the glow first (the mark itself stays). The glow look is the engine's own choice.
+
+### Messages
+
+- **DIL and EXP lines:** A kill prints only "Obtained EXP: [ N ]". DIL drops on the ground and "Acquired DIL: [ N DIL]." appears when it is picked up (by you or by your pet), as in the original game. The old combined line showed a DIL number that was never paid. Picked-up items print the game's "[Message] <item> has acquired <count>." line.
+
 ## 2.2.1 - Latency and Frames Update #1
 
 This update is about latency and frame rate: big fights, the HUD ping, loading and smoothness. Everything else that changed in 2.2.1 follows after it, grouped by topic.
