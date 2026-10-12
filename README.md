@@ -1,18 +1,18 @@
-# Dekaron Online 3.1.0
+# Dekaron Online 3.1.1
 
-**Current release: 3.1.0 — Gameplay, launcher and multiplayer fixes. Bots remain OFF and unchecked.**
+**Current release: 3.1.1 — Nameplates, ADMIN Glory, Emitted Flash, Dead Front and Siege hotfixes. Bots remain OFF and unchecked.**
 
-[Download 3.1.0: complete changes, verification and known limits](https://github.com/waveforgemp3app-cmyk/Tool/releases/tag/v3.1.0).
+[Download 3.1.1: complete changes, verification and known limits](https://github.com/waveforgemp3app-cmyk/Tool/releases/tag/v3.1.1).
 
-Use attached `Dekaron-3.1.0.zip`, `Dekaron-3.1.0-source.zip` (current engine source) and `SHA256-3.1.0.txt`. GitHub automatic **Source code** archives contain the repository documentation snapshot, not the attached engine source payload.
+Use attached `Dekaron-3.1.1.zip`, `Dekaron-3.1.1-source.zip` (current engine source) and `SHA256-3.1.1.txt`. GitHub automatic **Source code** archives contain the repository documentation snapshot, not the attached engine source payload.
 
 Bring your own lawful updated Global client and back up your game folder. Original game assets are excluded. Full Global parity and zero lag are not claimed. See the full release notes for supported behavior and unresolved native boundaries. Siege proposed defaults remain OFF; gifts remain non-refundable.
 
-Required automated tests, native game/multiplayer acceptance on the same PC, and package/embedded-installer integrity and privacy checks passed. The owner waived the two exact clean-installer runs; no clean-install acceptance or second-PC testing is claimed.
+Current release/install/dependency checks, scoped original-game rendered checks, nine Siege suites, and final package/embedded-installer integrity and privacy checks passed. The owner waived the two exact clean-installer runs; no clean-install acceptance or second-PC testing is claimed.
 
 ## Historical project documentation
 
-The earlier documentation and scan history below refer to their stated versions. Use the 3.1.0 release notes above for the current build.
+The earlier documentation and scan history below refer to their stated versions. Use the 3.1.1 release notes above for the current build.
 
 # Dekaron Online — One Client & Engine
 
