@@ -1,3 +1,19 @@
+# Dekaron Online 3.1.0
+
+**Current release: 3.1.0 — Gameplay, launcher and multiplayer fixes. Bots remain OFF and unchecked.**
+
+[Download 3.1.0: complete changes, verification and known limits](https://github.com/waveforgemp3app-cmyk/Tool/releases/tag/v3.1.0).
+
+Use attached `Dekaron-3.1.0.zip`, `Dekaron-3.1.0-source.zip` (current engine source) and `SHA256-3.1.0.txt`. GitHub automatic **Source code** archives contain the repository documentation snapshot, not the attached engine source payload.
+
+Bring your own lawful updated Global client and back up your game folder. Original game assets are excluded. Full Global parity and zero lag are not claimed. See the full release notes for supported behavior and unresolved native boundaries. Siege proposed defaults remain OFF; gifts remain non-refundable.
+
+Required automated tests, native game/multiplayer acceptance on the same PC, and package/embedded-installer integrity and privacy checks passed. The owner waived the two exact clean-installer runs; no clean-install acceptance or second-PC testing is claimed.
+
+## Historical project documentation
+
+The earlier documentation and scan history below refer to their stated versions. Use the 3.1.0 release notes above for the current build.
+
 # Dekaron Online — One Client & Engine
 
 **1-Click Installer • Full Release • Multiplayer • GM Tools • Item & Map Builders**
