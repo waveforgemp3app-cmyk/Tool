@@ -1,3 +1,19 @@
+# Dekaron Online 3.1.2
+
+**[Download 3.1.2 and read the complete release notes](https://github.com/waveforgemp3app-cmyk/Tool/releases/tag/v3.1.2)**
+
+One Client & Engine, with the optional **bots beta**, **phone/tablet beta**, and community gameplay/loading fixes. **Bots and mobile are works in progress. Bots are OFF by default** and can be enabled in Settings. All feedback helps development, and questions are welcome.
+
+3.1.2 fixes the reported Ardeca “Preparing map content” failure, guild upgrade/Camila/Norak ticket interactions, inventory splitting, party/friend/trade UI, paired D-Shop return portals, ranged attack continuation, level-up effects and native Guild of Glory placement. It adds bot activity/party/gear/dialogue and performance improvements, Dead Front fixes, and updated phone controls, sign-in, fullscreen and recovery.
+
+The signed Android APK and setup guide are included in `engine/Phone-Tablet`. It joins a world already running on a PC/host; it does not host or run the Windows installer. iPhone/iPad use Safari/Add to Home Screen; there is no native IPA. Bots and device/network compatibility are still being improved; complete Global parity and zero lag are not claimed.
+
+Bring your own lawful updated Global client; original game assets are not included. Back up private saves and stop normally before updating. Complete current instructions and feature history are inside the downloaded engine's `docs` and `Phone-Tablet` folders. See the release page for the exact downloadable files and checksums; repository documentation below is preserved history and may describe older versions.
+
+---
+
+## Preserved earlier README
+
 # Dekaron Online 3.1.1
 
 **Current release: 3.1.1 — Nameplates, ADMIN Glory, Emitted Flash, Dead Front and Siege hotfixes. Bots remain OFF and unchecked.**
