@@ -1,10 +1,10 @@
 # Dekaron Online 3.2.1
 
-[Download 3.2.1](https://github.com/waveforgemp3app-cmyk/Tool/releases/tag/v3.2.1) — chat message recovery hotfix. Hosts should update and restart their server. A stalled event stream now resumes from the player's last delivered message, so crowd activity no longer displaces their EXP, DIL, loot and chat notices from the newest-200 fallback. Existing general, system and broadcast placement is unchanged. Bots and Android remain works in progress; bots are OFF by default. The reported wing-effect artifacts remain under investigation. Bring your own updated, legitimate Global game files.
+[Download 3.2.1](https://github.com/waveforgemp3app-cmyk/Tool/releases/tag/v3.2.1) — chat recovery and pickup-color hotfix. Hosts should update and restart their server. A stalled event stream now resumes from the player's last delivered message, so crowd activity no longer displaces their EXP, DIL, loot and chat notices from the newest-200 fallback. Magic, Noble and Divine Noble pickup names use the original item-grade palette; DIL amounts use the existing DIL value palette. EXP colors and general, system and broadcast placement are unchanged. Bots and Android remain works in progress; bots are OFF by default. The reported wing-effect artifacts remain under investigation. Bring your own updated, legitimate Global game files.
 
-`fd62ecbae86e1f47d41fdcc6d2577837eaf1f1d14b58e476a98c5a7148f57a67  Dekaron-3.2.1.zip`
+`57889667cbef6222830087d8f08f68adebed796ab8f56655cb71ebd21bff5565  Dekaron-3.2.1.zip`
 
-`41dd1dbe15962ce596fa4547bdf43d74f7d6407387a440ebb985e2f83d4d6576  Dekaron-3.2.1-source.zip`
+`ab68f53a59cf1b4f4004466c7152920cf59773a33ae86f37de9acb83b6ebb923  Dekaron-3.2.1-source.zip`
 
 `bc6123e57d5e8e414d5baed6bf4fe260b195b514eb7aa9a83b5b6a5ebe31bce7  Dekaron-3.2.1-Android-beta.apk`
 
