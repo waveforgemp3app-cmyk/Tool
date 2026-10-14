@@ -1,4 +1,14 @@
-# Dekaron Online 3.2.0
+# Dekaron Online 3.2.1
+
+[Download 3.2.1](https://github.com/waveforgemp3app-cmyk/Tool/releases/tag/v3.2.1) — chat message recovery hotfix. Hosts should update and restart their server. A stalled event stream now resumes from the player's last delivered message, so crowd activity no longer displaces their EXP, DIL, loot and chat notices from the newest-200 fallback. Existing general, system and broadcast placement is unchanged. Bots and Android remain works in progress; bots are OFF by default. The reported wing-effect artifacts remain under investigation. Bring your own updated, legitimate Global game files.
+
+`fd62ecbae86e1f47d41fdcc6d2577837eaf1f1d14b58e476a98c5a7148f57a67  Dekaron-3.2.1.zip`
+
+`41dd1dbe15962ce596fa4547bdf43d74f7d6407387a440ebb985e2f83d4d6576  Dekaron-3.2.1-source.zip`
+
+`bc6123e57d5e8e414d5baed6bf4fe260b195b514eb7aa9a83b5b6a5ebe31bce7  Dekaron-3.2.1-Android-beta.apk`
+
+## 3.2.0 full notes
 
 **Siege Renew, guild dungeons, DK Square, events, quests and weapon looks.**
 
