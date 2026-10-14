@@ -1,3 +1,162 @@
+# Dekaron Online 3.2.0
+
+**Siege Renew, guild dungeons, DK Square, events, quests and weapon looks.**
+
+**Bots and mobile are included and remain work in progress. Bots are OFF by default.** All feedback helps development, and no question is dumb.
+
+Bring your own updated legitimate Dekaron Global client. No original game files are included.
+
+## Getting started
+
+| New players | Updating from 3.1.x |
+| --- | --- |
+| 1. Update Global, close it and back up the game folder. | 1. Stop the server normally and close all game windows. |
+| 2. Extract Dekaron-3.2.0.zip and run RUN-ME-FOR-GAME.exe. | 2. Back up engine/server/accounts and your game folder. |
+| 3. Choose the game folder, read the warning and confirm. | 3. Run the new RUN-ME-FOR-GAME.exe on that same folder. |
+| 4. Press Start, Sign up, then DX11 Client. | 4. Open Dekaron Online, press Start, sign in and play. |
+
+## What changed
+
+<details>
+<summary>Siege Renew (castles 193 / 194 / 195)</summary>
+
+- Castle guards fight back with their original attacks and ranged shots.
+- 20 castle gates: upgrade them, break them, capture resets them.
+- Only enemies can damage your gates.
+- Spectator mode: watch a running siege with the observer ticket.
+- Castle tax: lords collect tax from shop sales in the 7-day window.
+- Defender skills reach the right players and cost the lord's own DIL.
+- Capture, peace entry, weekly chest and reconnect all work.
+
+</details>
+
+<details>
+<summary>Guild dungeon — Frontier and Dead Island</summary>
+
+- Frontier ranking handles ties; it resets Thursday 03:00 server time.
+- Dead Island bosses, curses, totems and the Recollapse blast work.
+- Ten Ancient abilities from the Ancient stones, with their real effects.
+- Interior gates lead to the battlefield and award title 14.
+- A paid Dead Island run survives a server restart.
+- Runs 4–6 open with Camouflage [Frontier], a GM-event prize.
+- SkyQuest World Point is open.
+
+</details>
+
+<details>
+<summary>DK Square and Draco battlefield</summary>
+
+- Guardian stones spawn; break the enemy stone for 300 points.
+- DK tier bonuses apply: HP, move speed and hunting EXP.
+- Team costumes, wings and weapons show inside the battle, on you too.
+- Battle rewards are saved first, so a crash can't lose them.
+
+</details>
+
+<details>
+<summary>Events — OX Quiz, Zuto, Phantom Castle</summary>
+
+- OX Quiz runs by itself every Saturday 17:00 server time.
+- 15 OX questions, a countdown, the warning wall and real spikes.
+- OX survivors get the OX reward box.
+- Zuto's Battlefield: sides, registration, notices and achievements.
+- Fixed: Zuto lost registrations when a battle started on a month's last night.
+- Zuto titles: Slayer for most kills, Ruler for most captures.
+- Phantom Castle solo dungeon (levels 170–250) with its ticket.
+
+</details>
+
+<details>
+<summary>Colosseum and Forgotten Shipwreck</summary>
+
+- Battle Royale: a Crystal of the Dead appears where a player falls.
+- Break the crystal for a blessing; blessings stack up to 10 and add score.
+- Clear Colosseum Arena (Solo) to earn the Solo Champion title.
+- Monster Carnival: 10 players, Blue vs Red, in Forgotten Shipwreck.
+- Type /carnival to open the Carnival lobby during its weekly hours.
+- Kills earn CP for team skills; every member spins the reward roulette.
+
+</details>
+
+<details>
+<summary>Weapons and items — Ian</summary>
+
+- Ian in Ardeca changes your weapon's look with appearance materials.
+- The look shows on every character; weapon stats stay the same.
+- The tooltip shows the look and how long it lasts.
+- GMs can put event prizes straight into a player's bag: /gm giveitem `<name>` `<item>`.
+
+</details>
+
+<details>
+<summary>Quests</summary>
+
+- Quest requirements and rewards fixed across hundreds of quests.
+- Rewards pay the right Z Coins and level-matched items.
+- PvP, kill, fishing and stone objectives now count.
+- Orbis and field roulette pay out correctly.
+- Fishing progress saves.
+- Random-prize quests give one prize, as the quest text says.
+- The wedding box quest gives the box for your class.
+- Agent of 12 Gods title: kill every monster in a Karon's Fragment Hard or Core run.
+- Event quests that can't be finished are closed instead of stuck in your log.
+
+</details>
+
+<details>
+<summary>Skills, visuals and sound</summary>
+
+- All 21 transformation (Trans Up) levels cast and restore correctly.
+- Servant gauge, icons and skill requirements fixed.
+- Fury Control slows Fury loss; Self Injury now builds Fury.
+- Event weapons like Argama Pet and Tuban's Head play their hit sounds.
+- 45 broken skill effect files repaired.
+- Guild of Glory emblems light up and animate.
+- Guild of Glory crests use a 24-pixel display with visible animation overflow. Majesty and Best Guild retain their original side positions instead of being moved onto the crest. ADMIN guild text is red; staff labels show [ADMIN] once, including character selection and character/HP displays. Stored character names are unchanged.
+- V cycles through full details, a compact name-only card, and hidden names; compact cards no longer reserve empty guild-effect space.
+- Active HP/MP buffs update server maxima and shield capacity; expiry clamps the current pools.
+- Guard and Knight rank steps require their earned objectives before completion.
+- Windowed resizing keeps fitting HUD bars, F-key slots and panels fully on screen.
+- Duplicate +10 glow removed; boots play the right footstep sound.
+- All event schedules use one fixed server clock (UTC+1).
+
+</details>
+
+## Good to know
+
+- Bots remain optional and OFF by default. Bots and mobile are still being improved.
+- Phones join a PC/host world; the app cannot host. Android is included. iPhone/iPad use Safari; no native IPA is included.
+- Finish active Monster Carnival matches before restarting the host; those matches do not resume after a restart.
+- First start prepares your client and can take several minutes.
+- Back up accounts and the game folder before updating.
+- Camouflage [Frontier] is a GM event prize: `/gm giveitem Hero 1755139 1`.
+- Exact fresh-install/second-PC tests are not claimed for this build.
+
+## Downloads and checksums
+
+[Open the 3.2.0 release](https://github.com/waveforgemp3app-cmyk/Tool/releases/tag/v3.2.0)
+
+- [Dekaron-3.2.0.zip](https://github.com/waveforgemp3app-cmyk/Tool/releases/download/v3.2.0/Dekaron-3.2.0.zip)
+
+- [Dekaron-3.2.0-source.zip](https://github.com/waveforgemp3app-cmyk/Tool/releases/download/v3.2.0/Dekaron-3.2.0-source.zip)
+
+- [Dekaron-3.2.0-Android-beta.apk](https://github.com/waveforgemp3app-cmyk/Tool/releases/download/v3.2.0/Dekaron-3.2.0-Android-beta.apk)
+
+- [SHA256-3.2.0.txt](https://github.com/waveforgemp3app-cmyk/Tool/releases/download/v3.2.0/SHA256-3.2.0.txt)
+
+Download the attached `Dekaron-3.2.0-source.zip` for engine source. GitHub’s automatic source archives contain the repository documentation snapshot.
+
+```text
+dba14338379c1aac22f47f08bec95857554b6dd726af694ddb2d0b57f230f172  Dekaron-3.2.0.zip
+960d9600bb02c97604969eb5702a19d0b3c844eeeb04362890169c43cbe8453e  Dekaron-3.2.0-source.zip
+bc6123e57d5e8e414d5baed6bf4fe260b195b514eb7aa9a83b5b6a5ebe31bce7  Dekaron-3.2.0-Android-beta.apk
+```
+
+Report bugs in the forum or [GitHub issues](https://github.com/waveforgemp3app-cmyk/Tool/issues). Blank out passwords, IP addresses and personal paths. Unofficial fan project; required third-party licenses and notices are retained.
+
+<details>
+<summary>Complete earlier README — historical archive</summary>
+
 # Dekaron Online 3.1.2
 
 **[Download 3.1.2 and read the complete release notes](https://github.com/waveforgemp3app-cmyk/Tool/releases/tag/v3.1.2)**
@@ -245,3 +404,5 @@ Open an [issue](https://github.com/waveforgemp3app-cmyk/Tool/issues) or reply on
 ## Rights
 
 Unofficial fan project, not affiliated with or endorsed by the game's publisher. You need your own legitimate Global client. No original game files are distributed. Third-party components keep their own licenses (see [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md) and [DISTRIBUTION.md](DISTRIBUTION.md)).
+
+</details>
