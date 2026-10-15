@@ -1,3 +1,25 @@
+# 3.3.0 — Client & SQL One-Click Install Update
+
+[Download DK-3.3.0.zip](https://github.com/waveforgemp3app-cmyk/Tool/releases/download/v3.3.0/DK-3.3.0.zip) · [Release notes](https://github.com/waveforgemp3app-cmyk/Tool/releases/tag/v3.3.0)
+
+The galaxy launcher now brings together optional SQL beta storage, local play, multiplayer hosting and the dedicated game window. Choose local files, prepare a selected local named SQL instance, or use an existing authorized remote server. Existing SQL instances are reused; missing local instances require Microsoft terms and Windows administrator approval. Remote provisioning is not automatic.
+
+Client.exe prepares or updates a verified installation, retaining accounts/settings and a rollback copy. After reviewing Options and selecting Launch, choose DX11, DX11 Fullscreen, Desktop App or Web Browser. Full-file verification is faster with bounded workers while retaining every SHA-256 check; total loading time still depends on the machine and supplied assets.
+
+Party chat stays in chat, fullscreen handles the auto-hide taskbar, nearby monsters appear before attacking in large groups, damage numbers no longer hit the old display cap, and objective interactions in the corrected Dravice and Nepturos layouts are fixed.
+
+Character selection now includes a host/channel chooser, with the selected destination validated before the initial join.
+
+This update also includes selection-screen fixes and the offline Global reference library. Reduced repeated shader/material setup for flat particles preserves their image and improves dense Aloken area-attack responsiveness, alongside particle-upload and chat batching. Larger fights can still produce spikes; SQL, rendering, bots and mobile retain beta limitations; bots remain OFF by default. No new Android release is announced.
+
+Bring your own lawful updated Global files. Original game assets, private accounts and third-party SQL backups are excluded from the engine-only package; third-party notices remain included. This is a separate engine implementation, not an original Global executable/server-protocol compatibility claim.
+
+GitHub's automatic source archives describe this documentation repository, not the engine release payload. Earlier README content below is preserved history and must not be mistaken for current 3.3.0 availability or instructions.
+
+
+<details>
+<summary>Previous release notes and documentation</summary>
+
 # Dekaron Online 3.2.2
 
 [Download 3.2.2](https://github.com/waveforgemp3app-cmyk/Tool/releases/tag/v3.2.2) — nearby shops and interface fixes. Player shops now require walking up before browsing, and the server checks interaction range. The title list scrollbar, F-key belt placement, quest turn-in, movement while confirming item drops, and inventory/equipment/F-slot swaps were corrected. Bots and mobile remain works in progress; bots are OFF by default. The Android APK is the unchanged signed beta. Supply your own updated, legitimate Global game files. Two fresh clean-install/second-PC acceptance runs were not performed for this update.
@@ -426,5 +448,8 @@ Open an [issue](https://github.com/waveforgemp3app-cmyk/Tool/issues) or reply on
 ## Rights
 
 Unofficial fan project, not affiliated with or endorsed by the game's publisher. You need your own legitimate Global client. No original game files are distributed. Third-party components keep their own licenses (see [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md) and [DISTRIBUTION.md](DISTRIBUTION.md)).
+
+</details>
+
 
 </details>
