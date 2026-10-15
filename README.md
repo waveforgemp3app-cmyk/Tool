@@ -1,3 +1,15 @@
+# Dekaron Online 3.2.2
+
+[Download 3.2.2](https://github.com/waveforgemp3app-cmyk/Tool/releases/tag/v3.2.2) — nearby shops and interface fixes. Player shops now require walking up before browsing, and the server checks interaction range. The title list scrollbar, F-key belt placement, quest turn-in, movement while confirming item drops, and inventory/equipment/F-slot swaps were corrected. Bots and mobile remain works in progress; bots are OFF by default. The Android APK is the unchanged signed beta. Supply your own updated, legitimate Global game files. Two fresh clean-install/second-PC acceptance runs were not performed for this update.
+
+`81f2cddf43b64bbcbee34977edb9cb905e942a0e614378222719e0d4eb2bf427  Dekaron-3.2.2.zip`
+
+`820eb1ba114d679b052ce5c7b753e1be538f20341b46a4fec414cc852632729e  Dekaron-3.2.2-source.zip`
+
+`bc6123e57d5e8e414d5baed6bf4fe260b195b514eb7aa9a83b5b6a5ebe31bce7  Dekaron-3.2.2-Android-beta.apk`
+
+## Previous release notes
+
 # Dekaron Online 3.2.1
 
 [Download 3.2.1](https://github.com/waveforgemp3app-cmyk/Tool/releases/tag/v3.2.1) — chat recovery and pickup-color hotfix. Hosts should update and restart their server. A stalled event stream now resumes from the player's last delivered message, so crowd activity no longer displaces their EXP, DIL, loot and chat notices from the newest-200 fallback. Magic, Noble and Divine Noble pickup names use the original item-grade palette; DIL amounts use the existing DIL value palette. EXP colors and general, system and broadcast placement are unchanged. Bots and Android remain works in progress; bots are OFF by default. The reported wing-effect artifacts remain under investigation. Bring your own updated, legitimate Global game files.
