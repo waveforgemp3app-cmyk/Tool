@@ -1,0 +1,480 @@
+HISTORICAL FIRST POST — superseded by 3.3.2. Retained verbatim for prior-version detail and attribution. Read the current README for availability, limits and setup.
+
+[B][SIZE=5][COLOR=Goldenrod]3.3.1 — Installation Hotfix[/COLOR][/SIZE][/B]
+[URL=https://github.com/waveforgemp3app-cmyk/Tool/releases/tag/v3.3.1]Download DK-3.3.1.zip • full notes • SHA-256[/URL]
+[spoiler=01 | Setup fixes — new in 3.3.1]
+• Detect incomplete Engine folders before dependency setup and game-data preparation.
+• Explain how to recover from missing package files.
+• Check required launcher files before staging.
+• Check them again before installation finishes.
+[/spoiler]
+[spoiler=02 | Package and upgrade fixes — new in 3.3.1]
+• Include complete build-helper dependencies.
+• Include the correct dedicated-launcher build source.
+• Accept existing prepared game data during code-only updates.
+[/spoiler]
+[spoiler=03 | Install or update]
+Back up saves; stop your server and clients. Extract All into a new folder. Keep the complete package together; open DK-3.3.1/Engine/Client.exe. Keep your existing installation and backups. Do not copy only Client.exe or mix releases.
+[/spoiler]
+[spoiler=04 | Current notes]
+SQL remains beta; large fights can still spike. Bots OFF by default; bots/mobile remain works in progress. November 5 is on our radar 😂 — no matching update date promised. Older fixes below are release history, not new 3.3.1 changes.
+[/spoiler]
+[URL=https://github.com/waveforgemp3app-cmyk/Tool/releases/tag/v3.3.0]Full 3.3.0 Client & SQL update notes[/URL]
+
+[spoiler=Previous releases — historical archive]
+[CENTER][SIZE=6][B]Dekaron Online 3.2.2[/B][/SIZE]
+[SIZE=4]Nearby shops and interface fixes[/SIZE]
+[URL=https://github.com/waveforgemp3app-cmyk/Tool/releases/tag/v3.2.2][B]Download 3.2.2[/B][/URL][/CENTER]
+
+[B]Fixed:[/B] Player shops require you to walk up before browsing; the server checks the range before shop actions. NPC shops also require nearby interaction. The title list scrollbar works again, F1–F10 moves to the lower right, and movement works during item-drop confirmation. Quest turn-in blocks a second claim while the first is pending. The wider first-quest “1050” report still needs player confirmation. Inventory, equipment and F-bar cursor swapping was checked in the browser.
+
+3.2.0 content and 3.2.1 chat recovery/pickup colors remain included. Bots and mobile are works in progress; bots start OFF by default. The Android APK is the unchanged signed beta. Some wing-effect artifacts remain under investigation; please report the wing item name or ID, with private details hidden. Every report and question helps.
+
+[B]Update:[/B] Stop the server and game, back up engine\server\accounts and the game folder, run the new installer in that folder, then restart the server. Keep your accounts. New players need their own updated, legitimate Global game files; original assets are not included.
+
+[B]Downloads:[/B] Dekaron-3.2.2.zip (Windows), Dekaron-3.2.2-source.zip (engine source), Dekaron-3.2.2-Android-beta.apk (unchanged signed Android beta), SHA256-3.2.2.txt.
+[spoiler=SHA-256 checksums]
+81f2cddf43b64bbcbee34977edb9cb905e942a0e614378222719e0d4eb2bf427  Dekaron-3.2.2.zip
+820eb1ba114d679b052ce5c7b753e1be538f20341b46a4fec414cc852632729e  Dekaron-3.2.2-source.zip
+bc6123e57d5e8e414d5baed6bf4fe260b195b514eb7aa9a83b5b6a5ebe31bce7  Dekaron-3.2.2-Android-beta.apk
+[/spoiler]
+
+Archive/file hashes and the release test suite passed. No new clean-install or second-PC acceptance run was performed.
+
+[hr][/hr]
+[SIZE=5][B]Included 3.2.1 update and earlier history[/B][/SIZE]
+[B]3.2.1:[/B] Chat, EXP, DIL and loot notices resume after a brief server-stream stall; picked-up Magic, Noble and Divine Noble items use item-grade colors.
+
+
+[CENTER][SIZE=5][B]What's new in 3.2.0[/B][/SIZE][/CENTER]
+[table]
+[B]Siege Renew[/B]|Castle guards, 20 gates, spectators, castle tax
+[B]Guild dungeon[/B]|Dead Island bosses, totems, Ancient abilities, runs 4–6
+[B]DK Square / Draco[/B]|Guardian stones, tier bonuses, team looks
+[B]Events[/B]|Automatic OX Quiz, Zuto's Battlefield, Phantom Castle
+[B]Colosseum / Shipwreck[/B]|Battle Royale blessings, Solo Champion, Monster Carnival
+[B]Weapons and items[/B]|Ian weapon looks, GM event prizes
+[B]Quests[/B]|Rewards and objectives fixed, Agent of 12 Gods title
+[B]Skills and visuals[/B]|Transformations, Fury, glowing guild emblems
+[/table]
+
+[spoiler=title: Siege Renew (castles 193 / 194 / 195), title-style: bold]
+[LIST]
+[*]Castle guards fight back with their original attacks and ranged shots.
+[*]20 castle gates: upgrade them, break them, capture resets them.
+[*]Only enemies can damage your gates.
+[*]Spectator mode: watch a running siege with the observer ticket.
+[*]Castle tax: lords collect tax from shop sales in the 7-day window.
+[*]Defender skills reach the right players and cost the lord's own DIL.
+[*]Capture, peace entry, weekly chest and reconnect all work.
+[/LIST]
+[/spoiler]
+
+[spoiler=title: Guild dungeon — Frontier and Dead Island, title-style: bold]
+[LIST]
+[*]Frontier ranking handles ties; it resets Thursday 03:00 server time.
+[*]Dead Island bosses, curses, totems and the Recollapse blast work.
+[*]Ten Ancient abilities from the Ancient stones, with their real effects.
+[*]Interior gates lead to the battlefield and award title 14.
+[*]A paid Dead Island run survives a server restart.
+[*]Runs 4–6 open with Camouflage [Frontier], a GM-event prize.
+[*]SkyQuest World Point is open.
+[/LIST]
+[/spoiler]
+
+[spoiler=title: DK Square and Draco battlefield, title-style: bold]
+[LIST]
+[*]Guardian stones spawn; break the enemy stone for 300 points.
+[*]DK tier bonuses apply: HP, move speed and hunting EXP.
+[*]Team costumes, wings and weapons show inside the battle, on you too.
+[*]Battle rewards are saved first, so a crash can't lose them.
+[/LIST]
+[/spoiler]
+
+[spoiler=title: Events — OX Quiz, Zuto, Phantom Castle, title-style: bold]
+[LIST]
+[*]OX Quiz runs by itself every Saturday 17:00 server time.
+[*]15 OX questions, a countdown, the warning wall and real spikes.
+[*]OX survivors get the OX reward box.
+[*]Zuto's Battlefield: sides, registration, notices and achievements.
+[*]Fixed: Zuto lost registrations when a battle started on a month's last night.
+[*]Zuto titles: Slayer for most kills, Ruler for most captures.
+[*]Phantom Castle solo dungeon (levels 170–250) with its ticket.
+[/LIST]
+[/spoiler]
+
+[spoiler=title: Colosseum and Forgotten Shipwreck, title-style: bold]
+[LIST]
+[*]Battle Royale: a Crystal of the Dead appears where a player falls.
+[*]Break the crystal for a blessing; blessings stack up to 10 and add score.
+[*]Clear Colosseum Arena (Solo) to earn the Solo Champion title.
+[*]Monster Carnival: 10 players, Blue vs Red, in Forgotten Shipwreck.
+[*]Type /carnival to open the Carnival lobby during its weekly hours.
+[*]Kills earn CP for team skills; every member spins the reward roulette.
+[/LIST]
+[/spoiler]
+
+[spoiler=title: Weapons and items — Ian, title-style: bold]
+[LIST]
+[*]Ian in Ardeca changes your weapon's look with appearance materials.
+[*]The look shows on every character; weapon stats stay the same.
+[*]The tooltip shows the look and how long it lasts.
+[*]GMs can put event prizes straight into a player's bag: /gm giveitem <name> <item>.
+[/LIST]
+[/spoiler]
+
+[spoiler=title: Quests, title-style: bold]
+[LIST]
+[*]Quest requirements and rewards fixed across hundreds of quests.
+[*]Rewards pay the right Z Coins and level-matched items.
+[*]PvP, kill, fishing and stone objectives now count.
+[*]Orbis and field roulette pay out correctly.
+[*]Fishing progress saves.
+[*]Random-prize quests give one prize, as the quest text says.
+[*]The wedding box quest gives the box for your class.
+[*]Agent of 12 Gods title: kill every monster in a Karon's Fragment Hard or Core run.
+[*]Event quests that can't be finished are closed instead of stuck in your log.
+[/LIST]
+[/spoiler]
+
+[spoiler=title: Skills, visuals and sound, title-style: bold]
+[LIST]
+[*]All 21 transformation (Trans Up) levels cast and restore correctly.
+[*]Servant gauge, icons and skill requirements fixed.
+[*]Fury Control slows Fury loss; Self Injury now builds Fury.
+[*]Event weapons like Argama Pet and Tuban's Head play their hit sounds.
+[*]45 broken skill effect files repaired.
+[*]Guild of Glory emblems light up and animate.
+[*]Guild of Glory crests use a 24-pixel display with visible animation overflow. Majesty and Best Guild retain their original side positions instead of being moved onto the crest. ADMIN guild text is red; staff labels show [ADMIN] once, including character selection and character/HP displays. Stored character names are unchanged.
+[*]V cycles through full details, a compact name-only card, and hidden names; compact cards no longer reserve empty guild-effect space.
+[*]Active HP/MP buffs update server maxima and shield capacity; expiry clamps the current pools.
+[*]Guard and Knight rank steps require their earned objectives before completion.
+[*]Windowed resizing keeps fitting HUD bars, F-key slots and panels fully on screen.
+[*]Duplicate +10 glow removed; boots play the right footstep sound.
+[*]All event schedules use one fixed server clock (UTC+1).
+[/LIST]
+[/spoiler]
+
+[hr][/hr]
+[SIZE=4][B]Earlier versions[/B][/SIZE]
+[spoiler=3.1.2 — Bots beta and phone beta]
+[LIST]
+[*]Optional bots beta, OFF by default.
+[*]Phone and tablet beta: Android app, iPhone/iPad in Safari.
+[*]Fixed the Ardeca "Preparing map content" error.
+[*]Trade shows one step at a time; D-Shop Portal Scroll works.
+[*]Dead Front protection, timeouts and rewards fixed.
+[/LIST]
+[/spoiler]
+[spoiler=3.1.1 — Gameplay hotfix]
+[LIST]
+[*]Nameplates, Glory emblem and moving effects fixed.
+[*]Dead Front gates, spread and warnings fixed.
+[*]Two-stage trade confirmation.
+[/LIST]
+[/spoiler]
+[spoiler=3.0.1 and older]
+[LIST]
+[*]3.0.1: installer and item-import fix.
+[*]Full history: [URL=https://github.com/waveforgemp3app-cmyk/Tool/releases]GitHub releases[/URL]
+[/LIST]
+[/spoiler]
+
+[hr][/hr]
+[SIZE=4][B]Good to know[/B][/SIZE]
+[LIST]
+[*]Bots are OFF by default; turn on Bots (experimental) in the launcher if you want them.
+[*]The phone app joins a PC that is hosting; it can't host by itself.
+[*]Finish active Monster Carnival matches before restarting the host; those matches do not resume after a restart.
+[*]Camouflage [Frontier] is a GM-event prize: /gm giveitem <name> 1755139.
+[*]First start prepares your game files; this can take several minutes.
+[*]Back up your game folder and accounts before updating.
+[/LIST]
+
+[hr][/hr]
+[SIZE=4][B]Downloads[/B][/SIZE]
+[LIST]
+[*][B]Dekaron-3.2.0.zip[/B]: Windows game. Extract it and run RUN-ME-FOR-GAME.exe.
+[*][B]Dekaron-3.2.0-source.zip[/B]: engine source, for developers.
+[*][B]Dekaron-3.2.0-Android-beta.apk[/B]: phone app. It joins a PC that's already hosting.
+[*][B]SHA256-3.2.0.txt[/B]: checksums for the files above.
+[/LIST]
+[spoiler=SHA-256 checksums]
+Dekaron-3.2.0.zip: dba14338379c1aac22f47f08bec95857554b6dd726af694ddb2d0b57f230f172
+Dekaron-3.2.0-source.zip: 960d9600bb02c97604969eb5702a19d0b3c844eeeb04362890169c43cbe8453e
+Dekaron-3.2.0-Android-beta.apk: bc6123e57d5e8e414d5baed6bf4fe260b195b514eb7aa9a83b5b6a5ebe31bce7
+[/spoiler]
+
+All feedback helps development, and no question is dumb. Reply here or [URL=https://github.com/waveforgemp3app-cmyk/Tool/issues]open an issue[/URL]. Blank out passwords, IPs and file paths.
+[SIZE=1]Unofficial fan project, not affiliated with the game's publisher. You need your own legitimate Global client. No original game files are distributed. Third-party components keep their own licenses (THIRD_PARTY_NOTICES.md).[/SIZE]
+
+
+[B]Historical archive: the original version-specific entries below are preserved. Use the 3.2.2 download and checksums at the top for current files.[/B]
+[spoiler=Complete previous post — historical archive]
+[B][SIZE=5]3.1.2 — Bots Beta, Phone/Tablet Beta & Gameplay Fixes[/SIZE][/B]
+[URL=https://github.com/waveforgemp3app-cmyk/Tool/releases/tag/v3.1.2][B]Download 3.1.2 • Complete changes, instructions and exact file checksums[/B][/URL]
+3.1.2 adds the optional bots beta, the phone/tablet beta and fixes reported by players. [B]Both bots and mobile support are works in progress. Bots are OFF by default.[/B] Try the optional [B]Bots (experimental - work in progress)[/B] setting when you want them. Bug reports, suggestions and questions all help development. No question is too basic; please ask.
+
+Bring your own lawful, updated Global client. The host prepares its game files; original game assets are not included in this download. Back up your existing game folder and private saves, stop the server normally, then update the same installation. Do not delete accounts to repair a loading error.
+
+[B][SIZE=4]Downloads and installation[/SIZE][/B]
+
+• [B]Dekaron-3.1.2.zip[/B] — recommended Windows download. Extract it, run RUN-ME-FOR-GAME.exe and follow START-HERE.txt. No archive password is needed. The installer includes the engine and Android setup files.
+• [B]Dekaron-3.1.2-source.zip[/B] — complete scrubbed engine/source payload and manifest for manual setup and development. GitHub's automatically generated “Source code” archives are repository documentation snapshots; use this explicitly named asset for the actual engine.
+• [B]Dekaron-3.1.2-Android-beta.apk[/B] — direct Android download; identical to the signed APK included in the engine. It joins an already-running host. Its installed preview name is retained for update compatibility.
+• [B]SHA256-3.1.2.txt[/B] — checksums for the three downloads above.
+
+Exact SHA-256 values:
+
+• Dekaron-3.1.2.zip: 6e581c86d771f564256ec8e120600650bfd7b766bc35dda6b71dfa57162ec7e2 (20,714,148 bytes).
+• Dekaron-3.1.2-source.zip: 5ba13aaebda329a05e9183c06d38469eeaaa982e00cb0a71713b81e96a543354 (20,699,495 bytes).
+• Dekaron-3.1.2-Android-beta.apk: bc6123e57d5e8e414d5baed6bf4fe260b195b514eb7aa9a83b5b6a5ebe31bce7 (5,002,856 bytes).
+
+[B][SIZE=4]Phone and tablet beta[/SIZE][/B]
+
+• Hold a bag or equipped item for about 0.6 seconds to pick up its visible icon under your finger. Drag it to a bag cell or compatible equipment slot, then release. Holding alone does not use or equip it. Verified in the original game with trusted touch input: pickup, durable equip/unequip/swaps, invalid-drop retention and retry, cancellation, and no walking through the UI. Shift split and Ctrl preset/tooltip/link controls also passed.
+
+• The signed Android APK, checksum, sanitized provenance and instructions are included in engine/Phone-Tablet. The APK keeps its existing package/signature so it can update earlier previews. Its file/app name still says Private Preview. The owner has tested and approved the updated Android build; that does not establish compatibility with every device.
+• The galaxy connection screen and Dekaron icon match the PC Client. The app joins a PC-hosted world: it checks Open/Invite hosts, remembers checked servers and checks changed addresses again before Join. It does not host a world or run the Windows installer.
+• Settings/Hosting options can show a server QR. Android scans locally, imports only the address and checks it before you choose Join. Camera permission is optional. Passwords and sign-in tokens are not in the QR; manual entry remains available.
+• Same-Wi-Fi joining uses the host's reachable LAN address and port. Away from home needs a reachable HTTPS host/relay or an already-configured VPN; an account password does not make a private LAN address reachable over mobile data. Instructions cover both cases.
+• Valid same-host sign-in proceeds to character selection without asking for the same credentials twice. Expired or deliberately changed accounts still require sign-in. Phone connection/account screens stay upright, with larger fields and keyboard-aware internal scrolling. Character selection, creation, loading and play use landscape; tablet connection pages can rotate.
+• Fixed the instant-close Android startup error. Gameplay clears leftover portrait insets and uses immersive fullscreen. Android can show its bars briefly after an edge swipe. Renderer-loss recovery is visible, and returning pages wait for pending saves instead of silently reloading past a failed save.
+• Original game windows and quickslots remain in use. One gold 48px button sits immediately left of ONLINE; its drawer opens below, stays on screen, clears the minimap and provides larger panel/skill actions. Closing a panel consumes the touch instead of moving the character through the close button.
+• Window title bars retain long touch drags while panel-body scrolling stays normal. Touch camera panning is faster; tap/hold ground movement, select-then-attack, two-finger pan/twist/pinch and one-shot Shift/Ctrl modifiers remain available. Native item moves, equip/unequip and swaps retain server ownership and slot checks.
+• Connected mouse/keyboard controls remain available. Supported controllers and handheld PCs can use the left stick to move and right stick to pan; controller buttons are not mapped yet.
+• iPhone/iPad use the hosted Safari page, optionally Add to Home Screen, with manual rotation. [B]There is no native iPhone IPA in this release.[/B] The Android APK cannot install on iPhone. Phones download and render assets from the host; this is not video streaming or zero-download play.
+
+[B][SIZE=4]Community fixes, gameplay and presentation[/SIZE][/B]
+
+• Fixed the reported [B]Preparing map content[/B] Ardeca failure: a host with different original NPC/gate tables could be refused normal entry by the protected GM terrain audit. Unmodified Ardeca can now load without that GM-only audit match; existing edited overlays and malformed/missing collision data remain guarded. The reported table-mismatch case was reproduced in fixtures; the reporter's actual files were unavailable.
+• Improved launcher diagnostics for a missing control file, which did not necessarily mean an old server was running. The message directs users to the matching folder, normal restart and folder write access without bypassing server ownership. Fixed first-start settings on Windows systems using UTF-8.
+• Guild-level upgrade now opens its native confirmation and retains guild-master, GP and activity requirements. Camila's six class dialogs accept the offered quest correctly. Norak Secret Arena's first eligible ticket request issues the ticket; its native level 70–230 quest limits remain.
+• Inventory splitting survives an equivalent online inventory refresh and still rejects changed item ownership, quantities or reservations. Friend/messenger menus fit their native frame and stay on screen at different UI scales. Every occupied party row supports Change Leader/Kick; party chat uses the ordinary one-second chat limit.
+• Trading presents [B]one active action at a time[/B] through review, countdown and final confirmation. Both players still agree, and changed offers, stale confirmations and failed saves cannot bypass item custody. Gifts remain non-refundable.
+• A native [B]D-Shop Portal Scroll[/B] creates the owner's personal portal for its authored 30-minute lifetime. It takes the owner to the bound return point; the matching Return Portal NPC offers the trip back to the saved origin. Original portal art/effects, ownership, expiry, replacement, scene restrictions and durable item/travel saving are preserved. The ordinary Return Scroll remains separate.
+• Targeted ranged skills now resume the existing attack order after a successful cast, including Segeuriper and Incar. Movement, changed targets, death, cancelled casts or reconnects cancel stale work. Other characters' level-up events no longer play your own level-up effect or sound.
+• Active [B]Guild of Glory[/B] displays its supported native animated emblem left of the whole guild/rank/name stack, outside the text, with a 24px crest. Ordinary crests stay inline. Original colors/layers/timing are retained; no invented whole-nameplate frame was added. Unsupported native particle/mesh variants remain a disclosed limit.
+• Removed guessed box-open/close sounds from generic windows; authored button sounds remain. Accepted online box items play their mapped use sound once, or stay silent when no native mapping exists.
+• Follow closes the previous excessive gap. Remote movement begins with a shorter interpolation buffer and adapts sooner while preserving host path/speed authority. Latency/jitter regression checks cover 72 scenarios; this is not a zero-lag guarantee.
+• Required graphics compilation now has a visible timeout/retry path; optional first-person compilation can defer. Superseded scenes and late compiler results cannot finish an obsolete loading stage. Shared/world preparation, visible loading phases, cancellation and retry guards remain enforced.
+
+[B][SIZE=4]Bots beta: activity, equipment, parties and conversation[/SIZE][/B]
+
+• Bots are optional, OFF by default, and retain earned profiles when turned off. Counts distinguish humans, active bots, saved/queued identities and workers. Waiting identities do not earn progress just by existing.
+• Automatic admission uses actual host CPU, memory, event-loop and save pressure. Startup preparation, roster indexing, native gear/stat reads and collected durable checkpoints were improved without skipping persistence or ordinary action checks. The event-loop recovery sensor no longer mistakes its own sample interval for excess delay.
+• Foreground selection retains admitted neighbors through temporary pressure, including town residents with quests, and reduces visibility-boundary churn. Sustained pressure can still retire optional residents gradually. Ardeca's scheduling ceiling is 70 foreground bots and other maps' is 35, subject to eligible residents and shared host limits; these are not guaranteed populations.
+• Fresh roster placement favors Ardeca and spreads the remainder across eligible areas; existing saved positions, levels and earned progress remain. Town rest/service/merchant intentions and service spacing are respected. Existing eligible merchants can be selected beyond the first forty candidates; a bounded cohort can reserve up to three genuine premium sellers without inventing items, prices or capacity.
+• Fifteen classes use legal combat weapons, armor, accessories, wings and costumes. Fresh kits range from modest through top-end native +9 gear, legal Divine Noble options and compatible socket gems. Fresh kits and finite initial merchant stock are declared starting inventory, not earned loot; saved characters are not retroactively granted upgrades or currency.
+• Subsequent upgrades, refinement, sockets/options/branding/amplification, supported purchases, potions and shops use owned items/funds and native requirements. Fishing poles are excluded from combat-weapon upgrades. Listings/trades keep exact item identities and recheck reservations, ownership and funds; conversation alone never transfers an item.
+• Consecutive learned-skill choices recheck resources, targets, cooldown readiness, party leadership, event phases and human requests. Four tested native classes used 9–15 distinct skills across 20–23 accepted casts in bounded runs; this does not imply official AI or perfect rotations for every class.
+• Willing parties vary from small groups through seven players, use native membership/leadership and prefer available learned healers plus varied damage classes. At most two healers are recruited; missing healers are not invented. Teams can prepare in the last 15 seconds before gates and check useful party buffs every 210 seconds under normal mana/cooldown/range rules. Healing and resurrection remain native actions.
+• Supported quests, travel, combat, earning, shops, ordinary PvP and task parties use server rules. Accepted follow/wait/roam requests retain collision and action-phase checks. Queued background work is bounded and yields to foreground handoff; only completed ordinary actions earn durable progress.
+• Short replies no longer begin with “Quick answer,” recovery labels or “current objective” narration. Gear offers include real requirements; farming claims require an actual reachable context. Stable manners, paced typing, private/party audiences, bounded public conversations and factual follow-ups reduce repetitive chatter. Unsupported facts can produce silence. English, Spanish, Portuguese, German and French have supported finite dialogue with honest fallback.
+• Bot competence varies without free damage/cooldown bonuses. Gifts require acceptance and ordinary trade confirmation. Native travel, PK/channel/level/fee rules, human party membership and consent remain authoritative.
+
+[B][SIZE=4]Dead Front[/SIZE][/B]
+
+• Opposing teams remain protected during fortress/countdown phases, including forced targeting and area skills. Final party combat requires the completed final objective. An uncleared fortress times out as failure: earned PvE score EXP only, without PvP placement or winner treasure. Failure messages use the correct phase; reward saves can retry without duplicate grants.
+• Bot teams prioritize reachable required guards/bosses and walk reachable routes to inner switches, slates, book and wall while obeying native gates, service distances and channel times.
+• Two native level-240 top-kit parties completed the DK Core route, both bosses, inner objectives, final team battle, winner treasure, durable rewards and return under the original timers. A weaker level-210 run timed out normally. These bounded checks do not promise every bracket, composition or autonomous ticket-acquisition chain. Ice Castle retains its separate rules.
+
+[B][SIZE=4]Community setup FAQ[/SIZE][/B]
+
+[B]Where are starting maps and accounts?[/B] Paths are relative to engine:
+
+• New online characters are created in server/accounts/api.mjs at Ardeca map 150, X 203.5 / Z 247.5. The shared start in server/world/data.mjs is also used for owner-provisioned characters. Editing the original share/pc/startpoint.csv does not change these engine online starts.
+• Existing characters keep map and pos inside users[account].characters[] in the active host store. Changing a creation default does not move them. Field respawn uses server/world/field-respawn.mjs; dungeon returns have their own rules.
+• Local Start normally saves to server/accounts/data.json. Host friends uses the separate server/accounts/friends-accounts.json. DEKARON_ACCOUNT_STORE can override the active store. Local Start and Host friends do not share characters.
+• Stop normally and back up before deliberate maintenance. Account/control files are private; never post them. A map-loading error is not a reason to delete accounts or change starting maps.
+
+[B][SIZE=4]Testing and known limits[/SIZE][/B]
+
+Targeted native, server, persistence and original-game browser checks cover the fixes above; the owner approved the Android preview. A bounded 400-saved-record measurement held 55 actual Ardeca residents during a 25-second steady sample with zero observed turnover and six shops. That is not 400 simultaneously active bots, an Internet benchmark or a lag-free promise. Saved roster limits, admitted actors and connected human capacity are different figures.
+
+The final release suite, installation/dependency checks, embedded-installer integrity checks, privacy scrub and archive roundtrip checks passed. Every final ZIP entry was hash-checked against its packaged input. Two fresh designated clean-install runs were not performed because those targets were unavailable; no new second-PC acceptance or VirusTotal result is claimed.
+
+Bots and mobile remain works in progress. Broader event brackets, unassisted ticket acquisition, advanced acquisition/workshop chains, some native formulas/effects, physical-device coverage and long-session performance remain open. Existing disclosed Siege, Phantom and other unsupported native rules are not silently declared fixed by this update. Complete Global parity is not claimed.
+
+The complete feature inventory, inherited 3.0.x/3.1.1 history and limits remain in the included engine/docs/CLIENT-UPDATES.md and engine/docs/MULTIPLAYER.md. Phone instructions are in engine/Phone-Tablet/README.md. Use the exact final files and checksums listed with this release; prior-version scans/hashes do not certify this version.
+
+[B]Questions and feedback are welcome.[/B] For a bug report, include the engine version, PC or phone/device model, Android/browser version where relevant, map, action taken and exact error text. Redact private addresses, account information and tokens. Your reports help improve both betas and the rest of the engine.
+
+[B][SIZE=4]Preserved release history — 3.1.1 and earlier[/SIZE][/B]
+[B]The entries below describe their original releases. Use the 3.1.2 download above for current files; current bots are optional, experimental and OFF by default.[/B]
+[B][SIZE=5]3.1.1 — Gameplay hotfix[/SIZE][/B]
+[URL=https://github.com/waveforgemp3app-cmyk/Tool/releases/tag/v3.1.1][B]Download 3.1.1 • Complete changes, limits, verification and SHA-256[/B][/URL]
+
+[B]Bots remain OFF and unchecked.[/B] Bring your own lawful updated Global client; back up your game folder. Original game assets are not included. Complete Global parity and zero lag are not claimed.
+
+[B]3.1.1: nameplates; owner ADMIN Glory; moving Emitted Flash; DF gates/spread/cues; Siege safety.[/B]
+[B]Retained 3.1.0 changes — full notes above[/B]
+• Installer/item-import recovery, repeated-Start handling, player-only join/accounts/reconnect/resolution, LAN addresses and connection retries.
+• Scene loading/progress, movement/skills/effects/shaders, quest navigation, portals/entrances/story warps, Awakening and remaining-monster HUD.
+• Dungeon fees/tickets/issuance/payers, failed-save custody, supported missions, targetable Ghostmen and documented placement repairs.
+• Relogged-corpse revival, countdown/Life Beads, durable consumption/credit and field/dungeon returns.
+• Quest offers/boss/talk credit; Frontier rankings/awards/travel, PK-service refusal, chaotic decay and guild reductions.
+• Party/social/chat/mail corrections, partial-stack trade and gifts with durable delivery. Gifts remain non-refundable.
+• [B]Two-stage trade:[/B] both players first Confirm, wait through native locks/progress, then both Confirm again. The three-second server review is an explicit engine choice. Locked offers cannot change; stale votes/failed saves cannot bypass custody.
+• NPC shop left/right interaction, single-left-click player-shop purchase/duplicate protection, buyer movement hold, visible-card context menus and fitted signs/nameplates/two-line price prompts.
+• Party/minimap/nameplate/emblem/chat-bubble/buff/Help Book presentation; native item rarity/options/text and Ctrl comparison/Shift proven ranges.
+• Crests/costume options/effects/services, equipment/passive/skill consumers, dungeon EXP/respawn, wing/socket DekaPass credit and native previews/attachments.
+• All-class GM gear/gems, monster stats/drops, guarded tools, Ardeca entrances and font/dialogue/audio fixes.
+• Dead Front/Ice Castle timing/progression/pathing/warnings; Renew battle/travel/revive/peace entry/chest; disclosed single-server Zuto sides/battle; Ox UI/countdown.
+
+[B]Boundaries:[/B] unbound native dungeon/quest rules, Phantom, Dead Island/Hideout/SkyQuest, several Siege services and Ox pacing/spikes/rewards remain unresolved. Siege's four proposed defaults stay OFF. Missing formulas/assets/ranges are disclosed; engine choices are labeled. C22 first-person and terrain changes are excluded.
+
+Tests, installed-game play and package privacy checks passed; bots OFF. Exact clean-installer runs waived by owner.
+[B]Files:[/B] Dekaron-3.1.1.zip, Dekaron-3.1.1-source.zip, SHA256-3.1.1.txt. Attached source ZIP contains the current engine. Automatic GitHub source archives reflect the repository tag, not this attached payload.
+
+[B]Preserved release history below[/B] — use the 3.1.1 link above for current files and verification.
+
+
+[CENTER][SIZE=6][B]Dekaron Online — One Client & Engine[/B][/SIZE]
+[B]Historical release: 3.0.1 — Installer and item-import hotfix[/B][/CENTER]
+
+[URL=https://github.com/waveforgemp3app-cmyk/Tool/releases/tag/v3.0.1][B]Download 3.0.1 installer ZIP and source ZIP[/B][/URL]
+
+[SIZE=5][B]3.0.1 — Installer and item-import hotfix[/B][/SIZE]
+
+• Compatible itemevent.dat data no longer fails on previously unmapped bytes 387–388. These bytes remain unknown raw data; malformed-data checks stay active.
+• Setup supports upgrades from the verified published 3.0.0 baseline and offers Retry/Cancel after installation I/O errors.
+
+[B]Verification:[/B] Local 95,000-item build reported zero problems. Item-layout regression, embedded install/upgrade/rollback, preparation scheduling and builder liveness checks pass. Package privacy, embedded equality and encrypted round-trip pass. Exact-installer two-run gameplay verification and current VirusTotal scans remain pending; earlier scans do not apply to these files. The separately reported failure on another PC is unverified without its complete log.
+
+[B]Bots remain disabled[/B] while connection and lag work is investigated. Complete Global parity and zero lag are not claimed.
+
+Back up your game folder before setup. Download Dekaron-3.0.1.zip for installation or Dekaron-3.0.1-source.zip for engine inspection. Exact SHA-256 values are on the release page and in the attached SHA256-3.0.1.txt. GitHub's automatic source archive is not the installer.
+
+[SIZE=5][B]Previous 3.0.0 release and preserved 2.x history[/B][/SIZE]
+
+[SIZE=5][B]3.0.0 — Gameplay Fixes Update[/B][/SIZE]
+
+I've been backed up and busy, so I haven't had enough time to test every fix in-game. Community testers would be a huge help. Please report your map, class, reproduction steps and what happened. Thank you!
+
+[B]Bots are unavailable in this release.[/B] The Dashboard checkbox is disabled and the server cannot enable bots, including previously enabled installations. Saved bot profiles are preserved. Bots and further fine-tuning are coming in a later update.
+
+Changes carried into this build:
+
+• Skill corrections for Lightning Circle, enemy-targeted Curse Field and Spell Mastery, with guards for skill learning, resources and failed saves.
+• Personal-shop closing, sitting/movement recovery, vendor stock quantities/costs and purchases during icon loading.
+• Item options at drop time, original item UIDs, drop ownership, party EXP/item rules and human-only mixed-party shared DIL.
+• Party name frames, HP/shield/class/buff rows, pane-only party chat, map/minimap teammate markers and menu/friend-button layout.
+• Ctrl-number and Ctrl-right-click skill PK, native scene/ally/resource checks and supported Niete restrictions.
+• Scoped travel, portal, quest, dungeon and event admission/reward/exit corrections. Complete Global parity is not claimed.
+• Native chat palettes, compact World/Shout layout, tooltips, modal cancellation and saved-window positioning.
+• Starter-pack/PK/server settings before import and startup, clearer launcher controls and text.
+• Supported title/premium/Battle Support lifecycle and guild/emblem presentation work; remaining mode/visual details still need testing.
+• Bounded save writes, reduced repeated monster target scans, and guarded remote-equipment visual retries.
+
+Windows 10/11. Bring your own lawful, updated Global client: official game assets are not included. Back up your game folder before using the installer: after confirmation it preserves data/bin/engine/Client.exe and removes other game-root files, including the official updater. Existing 2.x history remains preserved.
+
+Downloads: use the attached Dekaron-3.0.0.zip installer package, or Dekaron-3.0.0-source.zip for the scrubbed engine payload. Do not use GitHub's automatic source archive as the game installer.
+
+Verification: payload privacy scrub, embedded installer equality and encrypted archive round-trip passed. Exact-installer two-run clean-install verification is still pending; no complete in-game or Global-parity certification is claimed.
+
+ZIP VirusTotal report: [url]https://www.virustotal.com/gui/file/fd15dc2b5d46b4312475dca4129785541a949c610b45019e63f7634341e48b0d/detection[/url]
+VirusTotal warns that this ZIP exceeds its inner-file scanning limit; the ZIP result does not certify its contained EXE.
+
+Installer VirusTotal report: [url]https://www.virustotal.com/gui/file/1baf04ee29ac015932a68a903c4043a25fae57f6ff431322cf3637ad11f48fd5/detection[/url]
+The submitted installer has vendor detections; these are not being called harmless or a clean scan. Check the current linked report.
+
+SHA-256:
+• Dekaron-3.0.0.zip: fd15dc2b5d46b4312475dca4129785541a949c610b45019e63f7634341e48b0d
+• Dekaron-3.0.0-source.zip: 2d4b5dbb2ba39e6aa644fa2c8c18b12e686858ea268380655e6d3ad2c33265e4
+• RUN-ME-FOR-GAME.exe: 1baf04ee29ac015932a68a903c4043a25fae57f6ff431322cf3637ad11f48fd5
+
+
+
+[SIZE=5][B]Archived 2.x notes and feature overview[/B][/SIZE]
+The following is the preserved 2.2.3-era post. For current downloads, hashes, verification status and changes use the 3.0.0 section above. Historical limitations below may have changed; complete Global parity is not claimed.
+
+[SIZE=5][B]2.2.3 - Faster First Start[/B][/SIZE]
+[I]The last update of the 2.x line. It has one change: the preparation of the client data that runs on the first start after an install or an update now runs its steps in parallel. The game itself is unchanged.[/I]
+[B]Loading[/B]
+[LIST]
+[*][B]First start after an install or update:[/B] The preparation used to take about 5 minutes (315 seconds on my PC) because its 21 steps ran one after another. Steps that do not depend on each other now run at the same time: the same preparation took 77 and 89 seconds in two runs on a 6-core PC with 32 GB of RAM (3.5 to 4 times faster; a PC with fewer cores gains less). The prepared files are identical to what the old order produced: compared file by file, every byte is the same except the time stamps inside 17 of the 57 data files.
+[*][B]How many steps run at once:[/B] up to 4, fewer on a PC with fewer than 5 cores, and at most 2 on a PC with less than 6 GB of RAM (4 at once used up to 3.8 GB of memory on my PC). Set the environment variable DEKARON_PREPARE_JOBS before starting the launcher to choose another number; DEKARON_PREPARE_JOBS=1 runs the steps one after another as before.
+[*][B]Safe on errors:[/B] if one step fails or you close the launcher, all running steps are stopped before anything is cleaned up, and the previously prepared data stays in place.
+[*][B]One more preparation after updating:[/B] the preparation program itself changed, so every install prepares once after updating to 2.2.3 (about 1.5 minutes now).
+[*][B]Changes to the channel files are noticed:[/B] the preparation did not look at the channel rule files (channel-data.mjs, channel-rules.js), so editing them did not rebuild the prepared data. It does now.
+[/LIST]
+
+[SIZE=5][B]Older updates[/B][/SIZE]
+[B]2.2.2[/B] Bug Fix Update (2026-10-07): Ctrl field PK with a per-server switch, the Half Bagi Fury skills, deleting characters, a per-server starter pack switch, teleport quests that landed in the map corner (Parca Temple, Requies Beach, Avalon), Sergio's Swift Box, party members on the minimap, Guild of Glory emblems, the DIL / EXP chat lines, and the Personal Shop seller no longer moving. Details: CHANGELOG.md
+[B]2.2.1[/B] Latency and Frames Update #1 (2026-10-07): lower ping and lag in big fights, much higher frame rate in towns, instant loading, auto attack hitting on every swing, summons and attack effects seen by other players, a frame pacer for the Max FPS options. Details: CHANGELOG.md
+[B]2.2.0[/B] (2026-10-04): DX11 client, three ways to launch, first person and mount lag fixes, custom maps. Details: CHANGELOG.md
+[B]2.1.2 and 2.1.1[/B] (2026-10-03/04): showcase characters, emote fixes, battlefields, first person for all classes, aura glow, Battle Support window, saved logins. Details: CHANGELOG.md
+[B]2.1.0 and 2.0.0 (Full Release):[/B] the full notes of every version are in the changelog: [URL=https://github.com/waveforgemp3app-cmyk/Tool/blob/main/CHANGELOG.md]CHANGELOG.md[/URL]
+
+[SIZE=5][B]Features[/B][/SIZE]
+A complete alternative engine, client and server for Dekaron. Play solo, host your own shared world for friends, or join someone else's server — plus a full GM panel, an Item Builder and a Map Builder. It uses [B]native Global data[/B] for classes, skills, items, monsters, maps, quests, shops, events and PvP. Where the data does not establish a rule or renderer behaviour, the reconstruction is documented and tagged [B]ENGINE-CHOSEN[/B] (or FITTED when fitted to Global screenshots). The remaining items and limits are listed below. This is not a claim of complete original-executable parity.
+
+[B]Client[/B]
+[LIST]
+[*]Three ways to play, all signed in from the launcher: [B]DX11 Client[/B] (Dekaron.exe, its own native window), [B]Desktop App[/B] or [B]Web Browser[/B]. Straight into the login hall, no password asked twice.
+[*]Native launcher with Dashboard, Accounts, Sign up, Hosting, Worlds and Settings, live server status and player counts. Start your own world with one click, host it for friends, or connect to a saved server. [B]Auto-sign in as local admin[/B] on your own installation; "Save account" tokens for other servers.
+[*]Original login scene, loading screens, character select and create screens with their native maps, framing and animated weapons; all 15 classes with their native models, equipment, animations, skills, skill trees, masteries and trans-up.
+[*]Optional first-person view next to the normal third-person camera (B switches, remappable), tuned for all 15 classes.
+[*]Rendering from the data: materials from the original boneanimation / itemmesh / glow shader formulas, each map's own texture filtering, fog and lighting from every map's light file, terrain and sky from the geometry / skybox shaders, authored object fog flags, bloom values per map. Refinement tier glow, gem-coloured weapon mist and the soft aura on glowing gear, hidden behind walls.
+[*]Loading: tables, map textures/meshes and window art prepared while you are at login / character select; compressed responses and versioned caching.
+[/LIST]
+[B]World and gameplay[/B]
+[LIST]
+[*]Server-owned movement, targeting, combat, skills, items, inventory, loot, quests and progression — the server validates what you do. Exact movement speeds from the animation clips; monsters smooth on the server clock; no rubber-banding tested at 0-300 ms lag.
+[*]Quests, shops, D-Shop and coin shops, item boxes, enhancement, sockets and gems, option changes, production, crafting and fishing; correct item footprints and socket layouts from the data.
+[*]Parties, party finder, Expedition (3 corps x 7, troop dungeons), durable trade, mail with attachments, messenger chat, world / shout / super chat, chat item links, emotes shared online.
+[*]Guilds with storage, 72 guild skills, guild board, rankings, alliances, guild war and guild tournament.
+[*]Pets (follow, auto-loot, bags, options, awakening), mounts and wings (upgrade and shape change), costumes (Transcendence, options, wardrobe).
+[*]Dungeons and events: Dead Front, Ice Castle, Forgotten Shipwreck roulette, Wanted, Egutt, attendance and connect rewards, Deka Pass.
+[*]DK channels, multi-channel, per-map level and ability caps, native map data, terrain, scenery, lighting, fog and sound; published custom maps enterable by everyone on the server.
+[*]Premium / Holy Water of Almighty: Select Warp, Return Point, NPC warp, remote mailbox / storage / shop, EXP bonuses, Party Warp, enhancement bonus, Battle helper Potion Set, Deka Pass premium track.
+[/LIST]
+[B]PvP and battlegrounds[/B]
+[LIST]
+[*][B]Colosseum[/B] — 16-player Battle Royale (16 > 8 > 4 > 2 > 1, champion and round rewards, B Point) and 2v2 Individual Match with MVP, matching, entry prompt, results and rankings.
+[*][B]Siege War (Zenoa Castle)[/B] — registration, siege tunnels, guardian stones and pendants, empathy capture at Juto, castle ownership, gate fortification, tax ledger.
+[*][B]DK Square[/B] — lobby team PvP (Miseria vs Ricchez) with battlefield HUD and results. [B]Arena[/B] — Draco Desert Battlefield (4 squads, Sunstone communion, DP tiers, rank board) and Lost Horizon (7-player team battle with stun / skill-lock / meteor stone objectives).
+[*]Race, mission titles, PvP duels, party PvP, Party War (Dead Front / Ice Castle), guild war hunting, DKR PvP, observer mode, training camp. PvP damage uses all 22 Global PvP option codes.
+[/LIST]
+[B]Tools[/B]
+[LIST]
+[*][B]GM Command Center (F10 or /GM):[/B] searchable panel with the original command syntax; level, EXP, currency, VIP Points, stats and skills tools; GM flags and moderation; monster and item catalogs with live previews (+11 to +15 items included), drops, spawning, item editing; map / NPC lookup, Ctrl+click teleports, live player map; inventory / storage inspection and transfers; quest and world controls, event logs, model and UI viewers, GM fly camera; owner controls for GM roles — permissions always checked by the server.
+[*][B]Item Builder:[/B] create or clone items (names, slots, ranks, classes, requirements, prices, stacks, trade flags, damage / defense / PvP fields, options, set bonuses, sockets, upgrade values), per-class models and icons with animated previews, [B]GLB mesh import[/B] (Meshy exports work) with axis / scale / transform / tint controls, save / spawn / equip, import / export projects.
+[*][B]Map Builder:[/B] blank or existing-map projects, terrain 64 / 128 / 256 / 512, .dkmap import / export, minimap capture, live preview; raise / lower / smooth / flatten / noise / vertex-colour brushes, ground types, holes, decals, water, collision painting; objects, monsters, NPC services and portals with snapping, multi-select, gizmos and undo / redo; lighting, sky, view distance, time of day, music, level limits; publish to your live server with version and collision checks; free-fly and first-person inspection with [B]full Xbox-style controller support[/B] (Map Builder only).
+[/LIST]
+[B]Requirements[/B]
+Windows 10/11, Chrome or Edge, and your updated Global client. The DX11 Client uses the Microsoft Edge WebView2 Runtime (part of Windows 11). Node.js is used if you already have it; if not, the launcher downloads its own private copy automatically (checksum-verified, no admin rights, nothing added to your system PATH).
+
+[SIZE=5][B]Hosting — play with friends[/B][/SIZE]
+[LIST]
+[*][B]Your own world:[/B] Start = your local world on this PC. Hosting options = a separate world with its own accounts, name and EXP / DIL / drop rates, Invite only or Open (accounts required). Friends create their own accounts on your server; accounts and characters belong to the server you pick.
+[*][B]Connect:[/B] friends enter your server address (or pick it from a saved list), sign up there and launch. Hosting is relay-only by default and the launcher shows no home address; a direct host listens on this PC only until you tick "Allow direct LAN connections" in Settings.
+[*][B]Online relay:[/B] the host connects outbound to a managed HTTPS relay you control (named Cloudflare tunnel + token); players get the relay address, never the host's. The relay gateway strips forwarded IPs and caps 24 connections per address.
+[*][B]Guided setup:[/B] four buttons — On this PC / My own VPS / Vercel / Cloudflare — write step-by-step guides and files under hosting-setup\; they deploy nothing and create no accounts. Docker / Railway / Render templates and a static Vercel / Cloudflare Pages connector are included for a persistent server.
+[*][B]Public server list:[/B] optional; it asks with a warning, records your consent, can be switched off in Settings without stopping the relay, and only lists on a directory address you set. The project runs no public directory.
+[*]Closing the game returns to the dashboard while your server stays running; closing the owned-server dashboard or clicking Stop Server saves and stops it.
+[/LIST]
+
+[SIZE=5][B]Known limits[/B][/SIZE]
+[LIST]
+[*]Not in the client data, so not invented: the Forgotten Shipwreck team rules, what unlocks Type 9 titles, the weekly shield, several Battle Support (Auto Hunt) option boxes.
+[*]First person: body / legs when looking straight down are still being worked on; framing is engine-chosen (the game has no first-person view).
+[*]Premium Holy Water of Almighty extras (account-wide service, daily VIP Points, dungeon-ticket discount) are not built yet: some values are not in the game data.
+[*]The dashboard "Server capacity" panel is not built yet (the server side works).
+[*]No relay is a DDoS shield by itself; that comes from the provider. Hosting sends your imported client data to the people you let in — host only for friends who have their own lawful client.
+[*]Values the data does not establish are tagged ENGINE-CHOSEN or FITTED in the code; this is not a claim of complete original-executable parity.
+[*]PK: the Safe Time after a kill, the tendency window and the drop penalty on death are not built yet; the Ctrl window, the kill counting and the fading speed are ENGINE-CHOSEN.
+[*]Trans Up skills of the Segita Shooter (Gracio), Trie Muse (Ramir) and Alokes (Zart): the game data has no transformation entries for them, so they are refused instead of inventing a look.
+[/LIST]
+
+[SIZE=5][B]Reporting problems[/B][/SIZE]
+Reply here or open an issue: [URL]https://github.com/waveforgemp3app-cmyk/Tool/issues[/URL]
+Tell me the class / map / skill / item, what happened and the exact error text. Please blank out passwords, IP addresses, account names and personal file paths in screenshots and logs.
+
+[SIZE=5][B]Rights[/B][/SIZE]
+Unofficial fan project, not affiliated with or endorsed by the game's publisher. You need your own legitimate Global client. No original game files are distributed. Third-party components keep their own licenses (see THIRD_PARTY_NOTICES.md).
+
+Updates keep coming — send me your lists of bugs and requests and I will keep knocking them out.
+[/spoiler]
+[/spoiler]
