@@ -4,6 +4,10 @@ Every version, newest first. The newest build is always on the releases page: ht
 
 Where the game data does not establish a rule, the engine's own choice is marked ENGINE-CHOSEN (or FITTED when it was fitted to Global screenshots).
 
+## 3.3.2
+
+See [all individually listed 3.3.2 changes](RELEASE-3.3.2.md). Older 3.x notes remain in README history and versioned releases.
+
 ## 2.2.3 - Faster First Start
 
 The last update of the 2.x line. It has one change: the preparation of the client data that runs on the first start after an install or an update now runs its steps in parallel. The game itself is unchanged.
