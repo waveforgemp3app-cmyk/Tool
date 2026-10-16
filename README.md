@@ -1,3 +1,17 @@
+# 3.3.1 — Installation Hotfix
+
+[Download DK-3.3.1.zip](https://github.com/waveforgemp3app-cmyk/Tool/releases/download/v3.3.1/DK-3.3.1.zip) · [Release notes](https://github.com/waveforgemp3app-cmyk/Tool/releases/tag/v3.3.1)
+
+Installation now detects incomplete Engine folders early, checks required launcher files before completing setup, includes complete build-helper dependencies, and accepts existing prepared data for code-only updates.
+
+Back up saves and stop your server/clients. Extract the whole new ZIP into a new folder, then open DK-3.3.1/Engine/Client.exe. Keep your existing installation and backups; do not copy only the executable or mix release files. SQL remains beta and larger-fight rendering remains under review. Bots stay OFF by default.
+
+The named ZIP is the engine package; GitHub’s automatic source archive is this documentation repository. Preserve earlier release history below.
+
+
+<details>
+<summary>Previous release notes and project history</summary>
+
 # 3.3.0 — Client & SQL One-Click Install Update
 
 [Download DK-3.3.0.zip](https://github.com/waveforgemp3app-cmyk/Tool/releases/download/v3.3.0/DK-3.3.0.zip) · [Release notes](https://github.com/waveforgemp3app-cmyk/Tool/releases/tag/v3.3.0)
@@ -448,6 +462,9 @@ Open an [issue](https://github.com/waveforgemp3app-cmyk/Tool/issues) or reply on
 ## Rights
 
 Unofficial fan project, not affiliated with or endorsed by the game's publisher. You need your own legitimate Global client. No original game files are distributed. Third-party components keep their own licenses (see [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md) and [DISTRIBUTION.md](DISTRIBUTION.md)).
+
+</details>
+
 
 </details>
 
